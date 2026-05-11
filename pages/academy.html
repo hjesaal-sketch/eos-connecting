@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>EOS Academy | EOS Connecting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  
+  <script src="/js/languages.js" defer></script>
+</head>
+<body class="page-academy">
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="/index.html#home" class="logo-nav">EOS Connecting</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html#services" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="/index.html#products" class="nav-link" data-i18n="nav.products">Sistemas</a></li>
+        <li><a href="/index.html#academy" class="nav-link" data-i18n="nav.academy">EOS Academy</a></li>
+        <li><a href="/index.html#ecosystem" class="nav-link" data-i18n="nav.ecosystem">Ecosistema</a></li>
+        <li><a href="/index.html#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+        <li>
+          <select class="lang-select" id="langSelect">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="pt">PT</option>
+            <option value="it">IT</option>
+          </select>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section-padding" style="padding-top:120px;">
+    <div class="container">
+      <!-- Header con logo + nombre -->
+      <header style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+        <img
+          src="/assets/images/academy.png"
+          alt="EOS Academy logo"
+          style="height:42px; width:auto; object-fit:contain;"
+        >
+        <h1 style="color:var(--purple); margin:0; font-size:2.1rem;" data-i18n="academy.header.title">
+          EOS Academy
+        </h1>
+      </header>
+
+      <p style="color:var(--text-muted); max-width:800px; margin-bottom:2.5rem;" data-i18n="academy.header.desc">
+        Plataforma educativa enfocada en uso práctico de IA, desarrollo de software y análisis de datos,
+        aterrizado a proyectos reales y sistemas productivos.
+      </p>
+
+      <!-- Bloque de IA Bajo Control, versión amplia -->
+      <section style="margin-bottom:3rem;">
+        <div class="course-card" style="max-width:1100px; margin:0 auto;">
+          <div class="course-video" style="position:relative;">
+            <div class="play-button" style="font-size:4rem;">▶</div>
+            <div style="position:absolute; bottom:20px; left:20px; text-align:left;">
+              <h3 style="font-size:2rem; margin-bottom:0.3rem;" data-i18n="academy.course.overlayTitle">Taller: IA Bajo Control</h3>
+              <p style="color:var(--purple); font-size:1rem;" data-i18n="academy.course.overlaySubtitle">Arquitectura Modular Asistida</p>
+            </div>
+          </div>
+
+          <div style="
+            padding:2.5rem 3rem;
+            display:grid;
+            grid-template-columns:repeat(4, minmax(0, 1fr));
+            gap:2rem;
+            background:#161b22;
+          ">
+            <div>
+              <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point1.title">01 Lógica</h4>
+              <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point1.desc">
+                Descomposición de sistemas y flujos críticos.
+              </p>
+            </div>
+            <div>
+              <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point2.title">02 Prompt</h4>
+              <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point2.desc">
+                Esqueletos arquitectónicos y diseño guiado por IA.
+              </p>
+            </div>
+            <div>
+              <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point3.title">03 Robustez</h4>
+              <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point3.desc">
+                Persistencia, manejo de errores y SQLite en serio.
+              </p>
+            </div>
+            <div>
+              <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point4.title">04 Deploy</h4>
+              <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point4.desc">
+                Sistemas resilientes en producción con métricas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Segundo título + descripción centrados -->
+          <h3 style="margin-top:2rem; text-align:center;" data-i18n="academy.course.title">IA Bajo Control</h3>
+          <p style="color:var(--text-muted); max-width:800px; margin:0 auto 1.5rem; text-align:center;" data-i18n="academy.course.desc">
+            Taller introductorio sobre uso responsable y efectivo de la inteligencia artificial
+            aplicada a arquitectura de sistemas.
+          </p>
+
+          <!-- Botón INSCRIBIRSE centrado -->
+          <div style="text-align:center; margin-bottom:2rem;">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdQnC0hpRLhFSZ6emRZS_tcy0cYg1B5hgYDEaRd0wEigepOcw/viewform?usp=dialog"
+              class="course-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="academy.course.cta"
+            >
+              INSCRIBIRSE
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="margin-bottom:1rem;" data-i18n="academy.future.title">Próximos contenidos de EOS Academy</h2>
+        <ul style="color:var(--text-muted); max-width:800px; line-height:1.8;">
+          <li data-i18n="academy.future.item1">Introducción a FastAPI y diseño de APIs escalables.</li>
+          <li data-i18n="academy.future.item2">Frontends productivos con React y TypeScript.</li>
+          <li data-i18n="academy.future.item3">Fundamentos de analítica de datos para toma de decisiones.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="/assets/images/Logo-eos-connecting-sf.png" alt="EOS Connecting Logo">
+      </div>
+      <h3 data-i18n="footer.title">EOS Connecting</h3>
+      <p data-i18n="footer.tagline">Software. IA. Resultados.</p>
+      <p class="copyright" data-i18n="footer.copy">
+        © 2025 EOS Connecting. Parte del ecosistema Odyssey Group.
+      </p>
+      <p class="copyright" data-i18n="footer.developed" style="margin-top:0.5rem;">
+        Desarrollado por EOS Connecting | Dev Henry Esaá
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

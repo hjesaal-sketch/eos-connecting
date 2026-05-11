@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>EOS Developing | EOS Connecting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  
+  <script src="/js/languages.js" defer></script>
+</head>
+<body class="page-developing">
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="/index.html#home" class="logo-nav">EOS Connecting</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html#services" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="/index.html#products" class="nav-link" data-i18n="nav.products">Sistemas</a></li>
+        <li><a href="/index.html#academy" class="nav-link" data-i18n="nav.academy">EOS Academy</a></li>
+        <li><a href="/index.html#ecosystem" class="nav-link" data-i18n="nav.ecosystem">Ecosistema</a></li>
+        <li><a href="/index.html#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+        <li>
+          <select class="lang-select" id="langSelect">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="pt">PT</option>
+            <option value="it">IT</option>
+          </select>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section-padding" style="padding-top:120px;">
+    <div class="container">
+      <!-- Header con logo + nombre -->
+      <header style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+        <img
+          src="/assets/images/developing.png"
+          alt="EOS Developing logo"
+          style="height:42px; width:auto; object-fit:contain;"
+        >
+        <h1 style="color:var(--cyan); margin:0; font-size:2.1rem;" data-i18n="developing.title">
+          EOS Developing
+        </h1>
+      </header>
+
+      <p style="color:var(--text-muted); max-width:800px; margin-bottom:2.5rem;" data-i18n="developing.subtitle">
+        Conectamos tecnología con resultados. Sistemas a medida, APIs robustas y plataformas
+        listas para producción usando Python, React y bases de datos optimizadas.
+      </p>
+
+      <section style="display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-bottom:3rem;">
+        <div class="card">
+          <h3 data-i18n="developing.card1.title">Sistemas a medida</h3>
+          <p data-i18n="developing.card1.desc">Aplicaciones diseñadas desde cero alrededor de tu operación, sin plantillas ni exceso de features.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="developing.card2.title">APIs y microservicios</h3>
+          <p data-i18n="developing.card2.desc">Backends escalables con FastAPI y Node, listos para integrarse con apps, ERPs y terceros.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="developing.card3.title">Datos y reporting</h3>
+          <p data-i18n="developing.card3.desc">Pipelines de datos, dashboards y reportes para tomar decisiones con evidencia.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="margin-bottom:1rem;" data-i18n="developing.section.title">Sistemas del ecosistema EOS Developing</h2>
+        <div style="display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+          <div class="card agnes-card">
+            <h3 data-i18n="products.agnes.title">AGNES</h3>
+            <p data-i18n="products.agnes.desc">Inteligencia porcina total: genética, sanidad y trazabilidad en una sola plataforma.</p>
+            <button class="btn btn-outline" style="margin-top:1rem;" onclick="window.location.href='/pages/agnes.html';" data-i18n="products.agnes.cta">
+              Ver AGNES
+            </button>
+          </div>
+          <div class="card nexus-card">
+            <h3 data-i18n="products.nexus.title">NexusCare Assets</h3>
+            <p data-i18n="products.nexus.desc">Control de activos médicos, auditoría y blindaje fiscal para clínicas y hospitales.</p>
+            <button class="btn btn-cyan" style="margin-top:1rem;" onclick="window.location.href='/pages/nexuscare.html';" data-i18n="products.nexus.cta.main">
+              Ver NexusCare
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="/assets/images/Logo-eos-connecting-sf.png" alt="EOS Connecting Logo">
+      </div>
+      <h3 data-i18n="footer.title">EOS Connecting</h3>
+      <p data-i18n="footer.tagline">Software. IA. Resultados.</p>
+      <p class="copyright" data-i18n="footer.copy">
+        © 2025 EOS Connecting. Parte del ecosistema Odyssey Group.
+      </p>
+      <p class="copyright" data-i18n="footer.developed" style="margin-top:0.5rem;">
+        Desarrollado por EOS Connecting | Dev Henry Esaá
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

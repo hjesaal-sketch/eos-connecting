@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+<head>
+  <meta charset="UTF-8">
+  <title>EOS Connecting | Software a Medida & IA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/pen">
+
+  <!-- aquí van los CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- aquí van los JS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/languages.js" defer></script>
+  <script src="js/utils.js" defer></script>
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark-bg: #0a0b10;
+      --dark-card: #111318;
+      --cyan: #00e5ff;
+      --cyan-glow: rgba(0, 229, 255, 0.5);
+      --green: #00ff88;
+      --blue: #00d4ff;
+      --yellow: #ffdd00;
+      --red: #ff4466;
+      --purple: #a64aff;
+      --text: #e8eaed;
+      --text-muted: #9aa0a6;
+      --grid-line: rgba(0, 229, 255, 0.03);
+      --agnes-green: #22c55e;
+      --nexus-blue: #2f81f7;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 11, 16, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+      padding: 1rem 0;
+      transition: background 0.3s ease;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-nav {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--cyan);
+      text-decoration: none;
+      text-shadow: 0 0 10px var(--cyan-glow);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--cyan);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--cyan);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .lang-select {
+      background: transparent;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .lang-select option {
+      background: var(--dark-bg);
+      color: var(--text);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--cyan);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* --- Animaciones --- */
+    @keyframes rotateYIn {
+      0% { transform: rotateY(0deg) scale(0.5); opacity: 0; }
+      100% { transform: rotateY(360deg) scale(1); opacity: 1; }
+    }
+
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .animate-float {
+      animation: floating 4s ease-in-out infinite;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(10, 11, 16, 0.9), rgba(10, 11, 16, 0.95)),
+        repeating-linear-gradient(0deg, transparent, transparent 49px, var(--grid-line) 50px),
+        repeating-linear-gradient(90deg, transparent, transparent 49px, var(--grid-line) 50px);
+      background-size: 100% 50px, 50px 100%;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-logo-container {
+      margin-bottom: 2rem;
+      perspective: 1000px;
+    }
+
+    .hero-logo {
+      width: 160px;
+      height: auto;
+      animation: rotateYIn 2s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+                 floating 4s ease-in-out infinite 2s;
+      filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .cyan-text {
+      color: var(--cyan);
+      text-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: var(--dark-bg);
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px var(--cyan-glow);
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 40px var(--cyan-glow);
+    }
+
+    /* Variante outline para el segundo botón */
+    .cta-button--outline {
+      background: transparent;
+      color: var(--cyan);
+      border: 2px solid var(--cyan);
+      box-shadow: none;
+    }
+
+    /* Wrapper para centrar el grupo de botones */
+    .hero-cta-wrapper {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Services */
+    .services {
+      padding: 6rem 0;
+      background: var(--dark-card);
+    }
+
+    .services h2,
+    .academy h2,
+    .ecosystem h2,
+    .contact h2 {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 3rem;
+      color: var(--text);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Botón centrado debajo del grid de servicios */
+    .services-cta-wrapper {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg, rgba(17, 19, 24, 0.9), rgba(10, 11, 16, 0.9));
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 229, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 40px rgba(0, 229, 255, 0.1);
+    }
+
+    .service-card h3 {
+      color: var(--cyan);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Grid & Cards */
+    .section-padding { padding: 100px 0; }
+    .grid-auto {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.3s;
+    }
+    .card:hover {
+      border-color: var(--neon-cyan);
+      transform: translateY(-5px);
+    }
+        
+    .agnes-card { border-left: 5px solid var(--agnes-green); }
+    .nexus-card { border-left: 5px solid var(--nexus-blue); }
+
+    /* Buttons estilo neon */
+    .btn {
+      padding: 0.9rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    .btn-cyan {
+      background: var(--cyan);
+      color: #000;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--cyan);
+      color: var(--cyan);
+    }
+
+    /* AGNES y Nexus usan sus propios colores de acento */
+    .agnes-card .btn-outline {
+      border-color: var(--agnes-green);
+      color: var(--agnes-green);
+    }
+
+    .nexus-card .btn-cyan {
+      background: var(--nexus-blue);
+      color: #fff;
+    }
+
+    .nexus-card .btn-outline {
+      border-color: var(--nexus-blue);
+      color: var(--nexus-blue);
+    }
+
+    /* Academy */
+    .academy {
+      padding: 6rem 0;
+      background: var(--dark-bg);
+      text-align: center;
+    }
+
+    .academy-desc {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .course-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, rgba(17, 19, 24, 0.9), rgba(10, 11, 16, 0.9));
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(166, 74, 255, 0.3);
+    }
+
+    .course-video {
+      aspect-ratio: 16/9;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .play-button {
+      font-size: 4rem;
+      color: var(--purple);
+      text-shadow: 0 0 20px rgba(166, 74, 255, 0.5);
+    }
+
+    .course-card h3 {
+      color: var(--purple);
+      font-size: 1.5rem;
+      padding: 1rem 2rem 0.5rem;
+    }
+
+    .course-card p {
+      color: var(--text-muted);
+      padding: 0 2rem 1.5rem;
+    }
+
+    .course-cta {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      margin-bottom: 1.5rem;
+      border: 2px solid var(--cyan);
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .course-cta:hover {
+      background: var(--cyan);
+      color: var(--dark-bg);
+    }
+
+.ecosystem-full {
+  padding: 6rem 0;
+  background: var(--dark-card);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.ecosystem-full h2 {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.ecosystem-full .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+    /* Ecosystem */
+    .ecosystem {
+      padding: 6rem 0;
+      background: var(--dark-card);
+      text-align: center;
+    }
+
+    .logos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .ecosystem-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .badge {
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .badge-agro {
+      border: 2px solid var(--green);
+      color: var(--green);
+    }
+
+    .badge-health {
+      border: 2px solid var(--blue);
+      color: var(--blue);
+    }
+
+    .badge-events {
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+    }
+
+    .badge-gaming {
+      border: 2px solid var(--red);
+      color: var(--red);
+    }
+
+    .ecosystem-logo {
+      width: 150px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ecosystem-item p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 6rem 0;
+      background: var(--dark-bg);
+      text-align: center;
+    }
+
+    .contact-desc {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .contact-btn {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      border: 2px solid;
+      text-align: center;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .contact-btn-primary {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: var(--dark-bg);
+    }
+
+    .contact-btn-primary:hover {
+      box-shadow: 0 0 30px var(--cyan-glow);
+    }
+
+    .contact-btn-green {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .contact-btn-green:hover {
+      background: var(--green);
+      color: var(--dark-bg);
+    }
+
+    .contact-btn-blue {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .contact-btn-blue:hover {
+      background: var(--blue);
+      color: var(--dark-bg);
+    }
+
+    .contact-btn-cyan {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .contact-btn-cyan:hover {
+      background: var(--cyan);
+      color: var(--dark-bg);
+    }
+
+/* Footer */
+footer {
+  padding: 3rem 0;
+  background: var(--dark-card);
+  text-align: center;
+  border-top: 1px solid rgba(0, 229, 255, 0.1);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+footer .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+footer .footer-logo {
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+footer .footer-logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.4));
+}
+
+footer h3 {
+  color: var(--cyan);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px var(--cyan-glow);
+}
+
+footer p {
+  color: var(--text-muted);
+}
+
+footer .copyright {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(10, 11, 16, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .nav-links.active {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero {
+        padding-top: 100px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logos-grid {
+        gap: 2rem;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-f07739098a39bd4e74ddd974652dac904146f33fdc1ecab356e8c809a05faccb.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-100b2a29d7a68d0f5c9eb0b3f9e63783410ea00dcab106def20a0ab3cf4a8804.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  <!-- EOS Connecting - Cyberpunk Website -->
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-content">
+    <a href="#" class="logo-nav">EOS Connecting</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+      <li><a href="#academy" class="nav-link" data-i18n="nav.academy">EOS Academy</a></li>
+      <li><a href="#ecosystem" class="nav-link" data-i18n="nav.ecosystem">Ecosistema</a></li>
+      <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+      <li>
+        <select class="lang-select" id="langSelect">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+          <option value="pt">PT</option>
+          <option value="it">IT</option>
+        </select>
+      </li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-logo-container">
+        <img src="assets/images/Logo-eos-connecting-sf.png" alt="EOS Connecting Logo" class="hero-logo">
+      </div>
+
+      <h1 data-i18n="hero.title">
+        Software a Medida, Análisis de Data<br>
+        <span class="cyan-text">& Soluciones con IA</span>
+      </h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Conectamos tecnología con resultados. Desarrollo de software, sitios web, análisis de datos e inteligencia artificial accesible.
+      </p>
+
+      <div class="hero-cta-wrapper">
+        <button
+          class="cta-button"
+          onclick="location.href='#services'"
+          data-i18n="hero.cta.services"
+        >
+          Servicios
+        </button>
+        <button class="cta-button cta-button--outline" onclick="location.href='#academy'">Eos Academy</button>
+      </div>
+    </div>
+  </section>
+
+<!-- Services -->
+<section id="services" class="services">
+  <div class="container">
+    <h2 data-i18n="services.title">Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 data-i18n="services.dev">Desarrollo de Software</h3>
+        <p data-i18n="services.dev.desc">Sistemas a medida, APIs robustas y soluciones escalables con Python, React y bases de datos optimizadas.</p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="services.web">Sitios Web</h3>
+        <p data-i18n="services.web.desc">Diseño moderno, responsivo y optimizado para SEO. Desde landing pages hasta plataformas completas.</p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="services.data">Análisis de Data</h3>
+        <p data-i18n="services.data.desc">Procesamiento, visualización y análisis de datos para la toma de decisiones estratégicas.</p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="services.survey">Encuestas y Formularios</h3>
+        <p data-i18n="services.survey.desc">Sistemas de recolección de datos con análisis automático y reportes en tiempo real.</p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="services.ia">Soluciones con IA</h3>
+        <p data-i18n="services.ia.desc">Automatización, chatbots y análisis predictivo usando herramientas de IA gratuitas y accesibles.</p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="services.consulting">Consultoría Técnica</h3>
+        <p data-i18n="services.consulting.desc">Asesoría en arquitectura de software, optimización de sistemas y estrategias digitales.</p>
+      </div>
+    </div>
+  </div>
+    <!-- Contenedor para centrar el botón y separarlo de las cards -->
+    <div class="services-cta-wrapper">
+      <a href="#contact" class="cta-button" data-i18n="hero.cta">COTIZAR PROYECTO</a>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section-padding" style="background: #0d1117;">
+  <div class="container">
+    <h2
+      style="text-align: center; font-size: 2.5rem;"
+      data-i18n="products.title"
+    >
+      Sistemas de Alto Impacto
+    </h2>
+    <div class="grid-auto">
+      <!-- AGNES -->
+      <div class="card agnes-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+          <h3>
+            <a href="pages/agnes.html" style="color:inherit; text-decoration:none;">AGNES</a>
+          </h3>
+          <span
+            style="color:var(--agnes-green); font-weight:800; border:1px solid; padding:2px 8px; border-radius:4px; font-size:0.7rem;"
+            data-i18n="products.agnes.badge"
+          >
+            AGRO
+          </span>
+        </div>
+        <p data-i18n="products.agnes.desc">
+          Inteligencia porcina total. Gestión de genética y salud con trazabilidad absoluta en tiempo real.
+        </p>
+        <button
+          class="btn btn-outline"
+          style="width:100%; margin-top:1.5rem;"
+          onclick="window.location.href='pages/agnes.html';"
+          data-i18n="products.agnes.cta"
+        >
+          Ver más
+        </button>
+      </div>
+
+      <!-- NexusCare -->
+      <div class="card nexus-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+          <h3>
+            <a href="pages/nexuscare.html" style="color:inherit; text-decoration:none;">NexusCare Assets</a>
+          </h3>
+          <span
+            style="color:var(--nexus-blue); font-weight:800; border:1px solid; padding:2px 8px; border-radius:4px; font-size:0.7rem;"
+            data-i18n="products.nexus.badge"
+          >
+            HEALTH
+          </span>
+        </div>
+        <p data-i18n="products.nexus.desc">
+          Control de activos médicos y blindaje fiscal. Evita mermas y asegura la trazabilidad legal.
+        </p>
+        <div style="display:flex; gap:10px; margin-top:1.5rem;">
+          <button
+            class="btn btn-cyan"
+            style="flex:1;"
+            onclick="window.location.href='pages/nexuscare.html';"
+            data-i18n="products.nexus.cta.main"
+          >
+            Ver más
+          </button>
+          <button
+            class="btn btn-outline"
+            style="flex:1;"
+            onclick="window.location.href='pages/nexuscare.html#licencias';"
+            data-i18n="products.nexus.cta.licenses"
+          >
+            Licencias
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EOS Academy -->
+<section id="academy" class="academy">
+  <div class="container">
+    <h2 data-i18n="academy.title">EOS Academy</h2>
+    <p class="academy-desc" data-i18n="academy.desc">
+      Plataforma educativa con cursos de IA, desarrollo de software y análisis de datos.
+    </p>
+
+<div class="course-card" style="max-width: 1100px; margin: 0 auto;">
+  <div class="course-video" style="position:relative;">
+    <div class="play-button" style="font-size:4rem;">▶</div>
+    <div style="position:absolute; bottom:20px; left:20px; text-align:left;">
+      <h3
+        style="font-size:2rem; margin-bottom:0.3rem;"
+        data-i18n="academy.course.overlayTitle"
+      >
+        Taller: IA Bajo Control
+      </h3>
+      <p
+        style="color:var(--purple); font-size:1rem;"
+        data-i18n="academy.course.overlaySubtitle"
+      >
+        Arquitectura Modular Asistida
+      </p>
+    </div>
+  </div>
+
+  <div style="
+    padding:2.5rem 3rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+    gap:2rem;
+    background:#161b22;
+  ">
+    <div>
+      <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point1.title">
+        01 Lógica
+      </h4>
+      <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point1.desc">
+        Descomposición de sistemas.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point2.title">
+        02 Prompt
+      </h4>
+      <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point2.desc">
+        Esqueletos arquitectónicos.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point3.title">
+        03 Robustez
+      </h4>
+      <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point3.desc">
+        Persistencia SQLite.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:var(--purple); margin-bottom:0.4rem;" data-i18n="academy.course.point4.title">
+        04 Deploy
+      </h4>
+      <p style="font-size:0.95rem; color:var(--text-muted);" data-i18n="academy.course.point4.desc">
+        Sistemas resilientes.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Texto y CTA debajo, separado de la tarjeta -->
+<div style="text-align:center; margin-top:2.5rem; margin-bottom:2rem;">
+  <h3
+    data-i18n="academy.course.title"
+    style="color:var(--purple); font-size:1.8rem; margin-bottom:0.75rem;"
+  >
+    IA Bajo Control
+  </h3>
+  <p
+    data-i18n="academy.course.desc"
+    style="
+      color:var(--text-muted);
+      max-width:780px;
+      margin:0 auto 1.5rem;
+      line-height:1.6;
+      font-size:1rem;
+    "
+  >
+    Taller introductorio sobre uso responsable y efectivo de la inteligencia artificial.
+  </p>
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSdQnC0hpRLhFSZ6emRZS_tcy0cYg1B5hgYDEaRd0wEigepOcw/viewform?usp=dialog"
+    class="course-cta"
+    data-i18n="academy.course.cta"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    INSCRIBIRSE
+  </a>
+</div>
+
+<!-- Ecosystem -->
+<section id="ecosystem" class="ecosystem ecosystem-full">
+  <h2 style="text-align:center; margin-bottom:2.5rem;">
+    <span data-i18n="ecosystem.title">Ecosistema</span>
+    <a
+      href="pages/odyssey.html"
+      style="color:var(--cyan); text-decoration:none; font-weight:600; margin-left:0.35rem;"
+    >
+      Odyssey Group
+    </a>
+  </h2>
+
+  <div class="container">
+    <div class="logos-grid">
+      <div class="ecosystem-item">
+        <span class="badge badge-agro" data-i18n="ecosystem.badge.dev">DESARROLLO</span>
+        <a href="pages/developing.html">
+          <img src="assets/images/developing.jpg" alt="AGNES" class="ecosystem-logo">
+        </a>
+        <p><a href="pages/developing.html" style="color:inherit; text-decoration:none;">AGNES</a></p>
+      </div>
+
+      <div class="ecosystem-item">
+        <span class="badge badge-health" data-i18n="ecosystem.badge.academy">FORMACIÓN</span>
+        <a href="pages/academy.html">
+          <img src="assets/images/academy.jpg" alt="IA Bajo Control" class="ecosystem-logo">
+        </a>
+        <p><a href="pages/academy.html" style="color:inherit; text-decoration:none;">IA Bajo Control</a></p>
+      </div>
+
+      <div class="ecosystem-item">
+        <span class="badge badge-events" data-i18n="ecosystem.badge.events">EVENTOS</span>
+        <a href="pages/odtrek.html">
+          <img src="assets/images/odtrek.jpg" alt="ODTREK" class="ecosystem-logo">
+        </a>
+        <p><a href="pages/odtrek.html" style="color:inherit; text-decoration:none;">ODTREK</a></p>
+      </div>
+
+      <div class="ecosystem-item">
+        <span class="badge badge-gaming" data-i18n="ecosystem.badge.culture">CULTURA</span>
+        <a href="pages/knots-and-blades.html">
+          <img src="assets/images/knb.jpg" alt="Knots & Blades" class="ecosystem-logo">
+        </a>
+        <p><a href="pages/knots-and-blades.html" style="color:inherit; text-decoration:none;">Knots & Blades</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 data-i18n="contact.title">Contáctanos</h2>
+    <p class="contact-desc" data-i18n="contact.desc">¿Tienes un proyecto en mente? Escríbenos y hagámoslo realidad.</p>
+    <div class="contact-buttons">
+      <a href="mailto:contacto@eosconnecting.com" class="contact-btn contact-btn-primary" data-i18n="contact.email">CONTACTO@EOSCONNECTING.COM</a>
+      <a href="https://wa.me/" class="contact-btn contact-btn-green" data-i18n="contact.whatsapp">WHATSAPP</a>
+      <a href="#" class="contact-btn contact-btn-blue" data-i18n="contact.linkedin">LINKEDIN</a>
+      <a href="https://www.instagram.com/eosconnecting/" class="contact-btn contact-btn-cyan" data-i18n="contact.instagram">INSTAGRAM</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-full">
+  <div class="container">
+    <div class="footer-logo">
+      <img src="assets/images/Logo-eos-connecting-sf.png" alt="EOS Connecting Logo">
+    </div>
+    <h3 data-i18n="footer.title">EOS Connecting</h3>
+    <p data-i18n="footer.tagline">Software. IA. Resultados.</p>
+    <p class="copyright" data-i18n="footer.copy">
+      © 2025 EOS Connecting. Parte del ecosistema Odyssey Group.<br>
+      Desarrollado por EOS Connecting | Dev Henry Esaá
+    </p>
+  </div>
+</footer>
+</body>
+</html>

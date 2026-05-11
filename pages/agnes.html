@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AGNES | EOS Connecting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS global reutilizado -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  
+  <script src="/js/languages.js" defer></script>
+</head>
+<body>
+  <!-- Navbar igual que en el home -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="/index.html#home" class="logo-nav">EOS Connecting</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html#services" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="/index.html#products" class="nav-link" data-i18n="nav.products">Sistemas</a></li>
+        <li><a href="/index.html#academy" class="nav-link" data-i18n="nav.academy">EOS Academy</a></li>
+        <li><a href="/index.html#ecosystem" class="nav-link" data-i18n="nav.ecosystem">Ecosistema</a></li>
+        <li><a href="/index.html#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+        <li>
+          <select class="lang-select" id="langSelect">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="pt">PT</option>
+            <option value="it">IT</option>
+          </select>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido AGNES -->
+  <main class="section-padding" style="padding-top:120px;">
+    <div class="container">
+      <!-- Header con logo + nombre -->
+      <header style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+        <img
+          src="/assets/images/agnes-logo.png"
+          alt="AGNES logo"
+          style="height:42px; width:auto; object-fit:contain;"
+        >
+        <h1 style="color:var(--agnes-green); margin:0; font-size:2.1rem;" data-i18n="agnes.title">
+          AGNES
+        </h1>
+      </header>
+
+      <p style="color:var(--text-muted); max-width:700px; margin-bottom:2rem;" data-i18n="agnes.subtitle">
+        Inteligencia porcina total. Gestión de genética y salud con trazabilidad absoluta en tiempo real.
+      </p>
+
+      <section style="margin-bottom:2.5rem;">
+        <h2 data-i18n="agnes.section1.title">¿Qué resuelve AGNES?</h2>
+        <p style="color:var(--text-muted); max-width:800px;" data-i18n="agnes.section1.desc">
+          Problemas de gestión de genética, sanidad y trazabilidad en porcinos que AGNES ayuda a resolver.
+        </p>
+      </section>
+
+      <section style="display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+        <div class="card agnes-card">
+          <h3 data-i18n="agnes.card1.title">Genética</h3>
+          <p data-i18n="agnes.card1.desc">Control de líneas, empadres y resultados reproductivos en un solo panel.</p>
+        </div>
+        <div class="card agnes-card">
+          <h3 data-i18n="agnes.card2.title">Sanidad</h3>
+          <p data-i18n="agnes.card2.desc">Registro clínico y alertas tempranas por lote y por animal.</p>
+        </div>
+        <div class="card agnes-card">
+          <h3 data-i18n="agnes.card3.title">Trazabilidad</h3>
+          <p data-i18n="agnes.card3.desc">Seguimiento desde la granja hasta el sacrificio con reportes exportables.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer igual que en el home -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="/assets/images/Logo-eos-connecting-sf.png" alt="EOS Connecting Logo">
+      </div>
+      <h3 data-i18n="footer.title">EOS Connecting</h3>
+      <p data-i18n="footer.tagline">Software. IA. Resultados.</p>
+      <p class="copyright" data-i18n="footer.copy">
+        © 2025 EOS Connecting. Parte del ecosistema Odyssey Group.
+      </p>
+      <p class="copyright" data-i18n="footer.developed" style="margin-top:0.5rem;">
+        Desarrollado por EOS Connecting | Dev Henry Esaá
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
