@@ -1,6 +1,32 @@
 const DEFAULT_LANG = "es";
 let translations = {};
 let currentLang = DEFAULT_LANG;
+let cachedElements = null;
+
+/**
+ * Obtiene los elementos traducibles con caché.
+ * La primera vez recorre el DOM, las siguientes usa la caché.
+ */
+function getTranslatableElements() {
+  if (!cachedElements) {
+    cachedElements = Array.from(document.querySelectorAll("[data-i18n]"));
+  }
+  return cachedElements;
+}
+
+/**
+ * Actualiza la caché de elementos traducibles.
+ * Útil si se agregan elementos dinámicamente después de la carga inicial.
+ * 
+ * @example
+ * // Después de agregar un modal o popup dinámico:
+ * refreshTranslatableCache();
+ * applyTranslations(currentLang);
+ */
+function refreshTranslatableCache() {
+  cachedElements = Array.from(document.querySelectorAll("[data-i18n]"));
+  console.log("Caché de traducciones actualizada:", cachedElements.length, "elementos");
+}
 
 async function loadTranslations() {
   try {
@@ -23,10 +49,17 @@ function applyTranslations(lang) {
     return;
   }
 
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (dict[key]) {
-      el.textContent = dict[key];
+  const elements = getTranslatableElements();
+  
+  // requestAnimationFrame evita bloquear el hilo principal
+  requestAnimationFrame(() => {
+    for (const el of elements) {
+      const key = el.getAttribute("data-i18n");
+      const newText = dict[key];
+      // Solo actualizar si el texto cambió (evita reflows innecesarios)
+      if (newText && el.textContent !== newText) {
+        el.textContent = newText;
+      }
     }
   });
 }
