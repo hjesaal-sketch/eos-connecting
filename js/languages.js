@@ -3,9 +3,26 @@ let translations = {};
 let currentLang = DEFAULT_LANG;
 let cachedElements = null;
 
+// Clave para localStorage
+const STORAGE_KEY = "eos-selected-lang";
+
 /**
- * Obtiene los elementos traducibles con caché.
- * La primera vez recorre el DOM, las siguientes usa la caché.
+ * Obtiene el idioma guardado o el predeterminado
+ */
+function getStoredLang() {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  return stored && stored.match(/^(es|en|de|pt|it)$/) ? stored : DEFAULT_LANG;
+}
+
+/**
+ * Guarda el idioma en localStorage
+ */
+function storeLang(lang) {
+  localStorage.setItem(STORAGE_KEY, lang);
+}
+
+/**
+ * Obtiene los elementos traducibles con caché
  */
 function getTranslatableElements() {
   if (!cachedElements) {
@@ -17,11 +34,6 @@ function getTranslatableElements() {
 /**
  * Actualiza la caché de elementos traducibles.
  * Útil si se agregan elementos dinámicamente después de la carga inicial.
- * 
- * @example
- * // Después de agregar un modal o popup dinámico:
- * refreshTranslatableCache();
- * applyTranslations(currentLang);
  */
 function refreshTranslatableCache() {
   cachedElements = Array.from(document.querySelectorAll("[data-i18n]"));
@@ -36,7 +48,13 @@ async function loadTranslations() {
       return;
     }
     translations = await res.json();
+    
+    // Cargar idioma guardado antes de aplicar
+    currentLang = getStoredLang();
     applyTranslations(currentLang);
+    
+    // Sincronizar selector después de aplicar
+    syncLanguageSelector();
   } catch (err) {
     console.error("Error cargando translations.json", err);
   }
@@ -51,17 +69,25 @@ function applyTranslations(lang) {
 
   const elements = getTranslatableElements();
   
-  // requestAnimationFrame evita bloquear el hilo principal
   requestAnimationFrame(() => {
     for (const el of elements) {
       const key = el.getAttribute("data-i18n");
       const newText = dict[key];
-      // Solo actualizar si el texto cambió (evita reflows innecesarios)
       if (newText && el.textContent !== newText) {
         el.textContent = newText;
       }
     }
   });
+}
+
+/**
+ * Sincroniza el valor del selector con el idioma actual
+ */
+function syncLanguageSelector() {
+  const select = document.getElementById("langSelect");
+  if (select && select.value !== currentLang) {
+    select.value = currentLang;
+  }
 }
 
 function initLanguageSelector() {
@@ -71,12 +97,14 @@ function initLanguageSelector() {
     return;
   }
 
+  // Asegurar que el selector muestre el idioma actual
   select.value = currentLang;
 
   select.addEventListener("change", (e) => {
     const lang = e.target.value;
     if (translations[lang]) {
       currentLang = lang;
+      storeLang(lang);        // Guardar en localStorage
       applyTranslations(lang);
     } else {
       console.warn("Idioma sin traducciones:", lang);
