@@ -64,15 +64,15 @@
         </p>
         
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="/downloads/NexusCare-Setup.exe" class="btn btn-cyan" style="background: var(--nexus-blue); border-color: var(--nexus-blue);">
+          <a href="/downloads/NexusCare-Setup.exe" class="btn btn-cyan" style="background: var(--nexus-blue); border-color: var(--nexus-blue);" data-i18n="nexus.download.button">
             ⬇️ Descargar para Windows
           </a>
-          <a href="#licencias" class="btn btn-outline" style="border-color: var(--nexus-blue); color: var(--nexus-blue);">
+          <a href="#comprar" class="btn btn-outline" style="border-color: var(--nexus-blue); color: var(--nexus-blue);" data-i18n="nexus.download.options">
             Ver opciones de licencia
           </a>
         </div>
         
-        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;" data-i18n="nexus.download.requirements">
           Requisitos: Windows 10/11, 4GB RAM, 500MB espacio
         </p>
       </section>
@@ -93,7 +93,7 @@
               style="width: 100%; padding: 0.8rem; background: #0a0b10; border: 1px solid var(--nexus-blue); border-radius: 8px; color: white; font-family: monospace;"
             >
           </div>
-          <button id="validateAndDownloadBtn" class="btn btn-cyan" style="background: var(--nexus-blue);">
+          <button id="validateAndDownloadBtn" class="btn btn-cyan" style="background: var(--nexus-blue);" data-i18n="nexus.activate.button">
             Validar y descargar
           </button>
         </div>
@@ -101,7 +101,7 @@
         <div id="activationMessage" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;"></div>
         
         <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-          <p style="color: var(--text-muted); font-size: 0.85rem;">
+          <p style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="nexus.activate.noLicense">
             💡 ¿No tienes licencia? 
             <a href="#comprar" style="color: var(--nexus-blue);">Adquiere una aquí</a> o comienza con la 
             <a href="#descarga" style="color: var(--nexus-blue);">prueba gratuita de 15 días</a>.
@@ -120,47 +120,47 @@
           
           <!-- Mensual -->
           <div style="background: #0a0b10; border-radius: 12px; padding: 1.5rem; border: 1px solid var(--nexus-blue); text-align: center;">
-            <h3 style="color: var(--nexus-blue);">Mensual</h3>
-            <p style="font-size: 2rem; font-weight: 800; margin: 1rem 0;">$XX</p>
-            <p style="color: var(--text-muted);">por mes</p>
+            <h3 style="color: var(--nexus-blue);" data-i18n="nexus.pricing.monthly">Mensual</h3>
+            <p style="font-size: 2rem; font-weight: 800; margin: 1rem 0;" data-i18n="nexus.pricing.monthly.price">$XX</p>
+            <p style="color: var(--text-muted);" data-i18n="nexus.pricing.monthly.per">por mes</p>
             <ul style="text-align: left; margin: 1rem 0; color: var(--text-muted); font-size: 0.85rem;">
-              <li>✅ 30 días de acceso</li>
-              <li>✅ Actualizaciones incluidas</li>
-              <li>✅ Soporte por email</li>
+              <li data-i18n="nexus.pricing.monthly.feature1">✅ 30 días de acceso</li>
+              <li data-i18n="nexus.pricing.monthly.feature2">✅ Actualizaciones incluidas</li>
+              <li data-i18n="nexus.pricing.monthly.feature3">✅ Soporte por email</li>
             </ul>
-            <button class="btn btn-outline" style="border-color: var(--nexus-blue); color: var(--nexus-blue); width: 100%;" onclick="comprarLicencia('MONTHLY')">
+            <button class="btn btn-outline" style="border-color: var(--nexus-blue); color: var(--nexus-blue); width: 100%;" onclick="comprarLicencia('MONTHLY')" data-i18n="nexus.pricing.monthly.button">
               Comprar
             </button>
           </div>
           
           <!-- Anual (recomendado) -->
           <div style="background: #0a0b10; border-radius: 12px; padding: 1.5rem; border: 2px solid var(--nexus-blue); text-align: center; position: relative;">
-            <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--nexus-blue); color: #000; padding: 2px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">RECOMENDADO</span>
-            <h3 style="color: var(--nexus-blue);">Anual</h3>
-            <p style="font-size: 2rem; font-weight: 800; margin: 1rem 0;">$XX</p>
-            <p style="color: var(--text-muted);">por año (ahorra 20%)</p>
+            <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--nexus-blue); color: #000; padding: 2px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;" data-i18n="nexus.pricing.yearly.badge">RECOMENDADO</span>
+            <h3 style="color: var(--nexus-blue);" data-i18n="nexus.pricing.yearly">Anual</h3>
+            <p style="font-size: 2rem; font-weight: 800; margin: 1rem 0;" data-i18n="nexus.pricing.yearly.price">$XX</p>
+            <p style="color: var(--text-muted);" data-i18n="nexus.pricing.yearly.per">por año (ahorra 20%)</p>
             <ul style="text-align: left; margin: 1rem 0; color: var(--text-muted); font-size: 0.85rem;">
-              <li>✅ 365 días de acceso</li>
-              <li>✅ Actualizaciones mayores y menores</li>
-              <li>✅ Soporte prioritario</li>
+              <li data-i18n="nexus.pricing.yearly.feature1">✅ 365 días de acceso</li>
+              <li data-i18n="nexus.pricing.yearly.feature2">✅ Actualizaciones mayores y menores</li>
+              <li data-i18n="nexus.pricing.yearly.feature3">✅ Soporte prioritario</li>
             </ul>
-            <button class="btn btn-cyan" style="background: var(--nexus-blue); width: 100%;" onclick="comprarLicencia('1_YEAR')">
+            <button class="btn btn-cyan" style="background: var(--nexus-blue); width: 100%;" onclick="comprarLicencia('1_YEAR')" data-i18n="nexus.pricing.yearly.button">
               Comprar
             </button>
           </div>
           
           <!-- Enterprise (antes Perpetua) - 10 años -->
           <div style="background: #0a0b10; border-radius: 12px; padding: 1.5rem; border: 1px solid var(--nexus-blue); text-align: center;">
-            <h3 style="color: var(--nexus-blue);">Enterprise</h3>
-            <p style="font-size: 2rem; font-weight: 800; margin: 1rem 0;">$XX</p>
-            <p style="color: var(--text-muted);">pago único (10 años)</p>
+            <h3 style="color: var(--nexus-blue);" data-i18n="nexus.pricing.enterprise">Enterprise</h3>
+            <p style="font-size: 2rem; font-weight: 800; margin: 1rem 0;" data-i18n="nexus.pricing.enterprise.price">$XX</p>
+            <p style="color: var(--text-muted);" data-i18n="nexus.pricing.enterprise.per">pago único (10 años)</p>
             <ul style="text-align: left; margin: 1rem 0; color: var(--text-muted); font-size: 0.85rem;">
-              <li>✅ 10 años de acceso</li>
-              <li>✅ Todas las actualizaciones</li>
-              <li>✅ Soporte dedicado + SLA</li>
-              <li>✅ Implementación asistida</li>
+              <li data-i18n="nexus.pricing.enterprise.feature1">✅ 10 años de acceso</li>
+              <li data-i18n="nexus.pricing.enterprise.feature2">✅ Todas las actualizaciones</li>
+              <li data-i18n="nexus.pricing.enterprise.feature3">✅ Soporte dedicado + SLA</li>
+              <li data-i18n="nexus.pricing.enterprise.feature4">✅ Implementación asistida</li>
             </ul>
-            <button class="btn btn-outline" style="border-color: var(--nexus-blue); color: var(--nexus-blue); width: 100%;" onclick="comprarLicencia('ENTERPRISE')">
+            <button class="btn btn-outline" style="border-color: var(--nexus-blue); color: var(--nexus-blue); width: 100%;" onclick="comprarLicencia('ENTERPRISE')" data-i18n="nexus.pricing.enterprise.button">
               Contactar ventas
             </button>
           </div>
@@ -194,20 +194,20 @@
         <h2 data-i18n="nexus.licenses.title">Tipos de licencia</h2>
         <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 1rem;">
           <div style="background: var(--dark-card); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--nexus-blue);">
-            <h4 style="color: var(--nexus-blue);">Prueba</h4>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">15 días gratis. Funcionalidad completa.</p>
+            <h4 style="color: var(--nexus-blue);" data-i18n="nexus.license.trial">Prueba</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="nexus.license.trial.desc">15 días gratis. Funcionalidad completa.</p>
           </div>
           <div style="background: var(--dark-card); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--nexus-blue);">
-            <h4 style="color: var(--nexus-blue);">Mensual</h4>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">30 días. Renovable.</p>
+            <h4 style="color: var(--nexus-blue);" data-i18n="nexus.license.monthly">Mensual</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="nexus.license.monthly.desc">30 días. Renovable.</p>
           </div>
           <div style="background: var(--dark-card); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--nexus-blue);">
-            <h4 style="color: var(--nexus-blue);">Anual</h4>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">365 días. Ahorro del 20%.</p>
+            <h4 style="color: var(--nexus-blue);" data-i18n="nexus.license.yearly">Anual</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="nexus.license.yearly.desc">365 días. Ahorro del 20%.</p>
           </div>
           <div style="background: var(--dark-card); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--nexus-blue);">
-            <h4 style="color: var(--nexus-blue);">Enterprise</h4>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">10 años de acceso. Soporte dedicado.</p>
+            <h4 style="color: var(--nexus-blue);" data-i18n="nexus.license.enterprise">Enterprise</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="nexus.license.enterprise.desc">10 años de acceso. Soporte dedicado.</p>
           </div>
         </div>
       </section>
