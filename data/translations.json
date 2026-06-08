@@ -190,7 +190,11 @@
     "nexus.card2.title": "Trazabilidad legal",
     "nexus.card2.desc": "Historial de movimientos, responsables y ubicaciones por activo.",
     "nexus.card3.title": "Blindaje fiscal",
-    "nexus.card3.desc": "Soporte documental para auditorías y cumplimiento normativo."
+    "nexus.card3.desc": "Soporte documental para auditorías y cumplimiento normativo.",
+    "agnes.card4.title": "Escalable",
+    "agnes.card4.desc": "Diseñado para porcinos, pero ampliable a otras especies según tus necesidades.",
+    "agnes.whatsapp.button": "📱 Solicitar acceso a AGNES",
+    "agnes.whatsapp.message": "Hola, estoy interesado en conocer AGNES para mi operación porcina. Por favor, quiero solicitar acceso al demo."
   },
 
   "en": {
@@ -420,7 +424,11 @@
     "nexus.license.yearly": "Annual",
     "nexus.license.yearly.desc": "365 days. 20% savings.",
     "nexus.license.enterprise": "Enterprise",
-    "nexus.license.enterprise.desc": "10 years access. Dedicated support."
+    "nexus.license.enterprise.desc": "10 years access. Dedicated support.",
+    "agnes.card4.title": "Scalable",
+    "agnes.card4.desc": "Designed for swine, but extendable to other species according to your needs.",
+    "agnes.whatsapp.button": "📱 Request access to AGNES",
+    "agnes.whatsapp.message": "Hello, I am interested in learning about AGNES for my swine operation. Please, I want to request access to the demo."
   },
 
   "de": {
@@ -650,7 +658,11 @@
     "nexus.license.yearly": "Jährlich",
     "nexus.license.yearly.desc": "365 Tage. 20% Ersparnis.",
     "nexus.license.enterprise": "Enterprise",
-    "nexus.license.enterprise.desc": "10 Jahre Zugriff. Dedizierter Support."
+    "nexus.license.enterprise.desc": "10 Jahre Zugriff. Dedizierter Support.",
+    "agnes.card4.title": "Skalierbar",
+    "agnes.card4.desc": "Für Schweine konzipiert, aber je nach Bedarf auf andere Arten erweiterbar.",
+    "agnes.whatsapp.button": "📱 Zugang zu AGNES anfordern",
+    "agnes.whatsapp.message": "Hallo, ich möchte AGNES für meinen Schweinebetrieb kennenlernen. Bitte ich möchte Zugang zur Demo anfordern."
   },
 
   "pt": {
@@ -880,7 +892,11 @@
     "nexus.license.yearly": "Anual",
     "nexus.license.yearly.desc": "365 dias. Economia de 20%.",
     "nexus.license.enterprise": "Enterprise",
-    "nexus.license.enterprise.desc": "10 anos de acesso. Suporte dedicado."
+    "nexus.license.enterprise.desc": "10 anos de acesso. Suporte dedicado.",
+    "agnes.card4.title": "Escalável",
+    "agnes.card4.desc": "Projetado para suínos, mas extensível a outras espécies conforme sua necessidade.",
+    "agnes.whatsapp.button": "📱 Solicitar acesso ao AGNES",
+    "agnes.whatsapp.message": "Olá, estou interessado em conhecer o AGNES para minha operação de suínos. Por favor, quero solicitar acesso ao demo."
   },
 
   "it": {
@@ -1110,6 +1126,10 @@
     "nexus.license.yearly": "Annuale",
     "nexus.license.yearly.desc": "365 giorni. Risparmio del 20%.",
     "nexus.license.enterprise": "Enterprise",
-    "nexus.license.enterprise.desc": "10 anni di accesso. Supporto dedicato."
+    "nexus.license.enterprise.desc": "10 anni di accesso. Supporto dedicato.",
+    "agnes.card4.title": "Scalabile",
+    "agnes.card4.desc": "Progettato per suini, ma estendibile ad altre specie secondo le tue esigenze.",
+    "agnes.whatsapp.button": "📱 Richiedi accesso ad AGNES",
+    "agnes.whatsapp.message": "Ciao, sono interessato a conoscere AGNES per la mia operazione suina. Per favore, voglio richiedere l'accesso alla demo."
   }
 }
