@@ -194,7 +194,10 @@
     "agnes.card4.title": "Escalable",
     "agnes.card4.desc": "Diseñado para porcinos, pero ampliable a otras especies según tus necesidades.",
     "agnes.whatsapp.button": "📱 Solicitar acceso a AGNES",
-    "agnes.whatsapp.message": "Hola, estoy interesado en conocer AGNES para mi operación porcina. Por favor, quiero solicitar acceso al demo."
+    "agnes.whatsapp.message": "Hola, estoy interesado en conocer AGNES para mi operación porcina. Por favor, quiero solicitar acceso al demo.",
+    "agnes.whatsapp.section.title": "¿Interesado en AGNES?",
+    "agnes.whatsapp.section.desc": "Escríbenos por WhatsApp, cuéntanos tu operación porcina y te daremos acceso al demo.",
+    "agnes.whatsapp.button": "📱 Solicitar acceso a AGNES"
   },
 
   "en": {
@@ -428,7 +431,10 @@
     "agnes.card4.title": "Scalable",
     "agnes.card4.desc": "Designed for swine, but extendable to other species according to your needs.",
     "agnes.whatsapp.button": "📱 Request access to AGNES",
-    "agnes.whatsapp.message": "Hello, I am interested in learning about AGNES for my swine operation. Please, I want to request access to the demo."
+    "agnes.whatsapp.message": "Hello, I am interested in learning about AGNES for my swine operation. Please, I want to request access to the demo.",
+    "agnes.whatsapp.section.title": "Interested in AGNES?",
+    "agnes.whatsapp.section.desc": "Write to us on WhatsApp, tell us about your swine operation, and we will give you access to the demo.",
+    "agnes.whatsapp.button": "📱 Request access to AGNES"
   },
 
   "de": {
@@ -662,7 +668,10 @@
     "agnes.card4.title": "Skalierbar",
     "agnes.card4.desc": "Für Schweine konzipiert, aber je nach Bedarf auf andere Arten erweiterbar.",
     "agnes.whatsapp.button": "📱 Zugang zu AGNES anfordern",
-    "agnes.whatsapp.message": "Hallo, ich möchte AGNES für meinen Schweinebetrieb kennenlernen. Bitte ich möchte Zugang zur Demo anfordern."
+    "agnes.whatsapp.message": "Hallo, ich möchte AGNES für meinen Schweinebetrieb kennenlernen. Bitte ich möchte Zugang zur Demo anfordern.",
+    "agnes.whatsapp.section.title": "Interessiert an AGNES?",
+    "agnes.whatsapp.section.desc": "Schreiben Sie uns auf WhatsApp, erzählen Sie uns von Ihrem Schweinebetrieb, und wir geben Ihnen Zugang zur Demo.",
+    "agnes.whatsapp.button": "📱 Zugang zu AGNES anfordern"
   },
 
   "pt": {
@@ -896,7 +905,10 @@
     "agnes.card4.title": "Escalável",
     "agnes.card4.desc": "Projetado para suínos, mas extensível a outras espécies conforme sua necessidade.",
     "agnes.whatsapp.button": "📱 Solicitar acesso ao AGNES",
-    "agnes.whatsapp.message": "Olá, estou interessado em conhecer o AGNES para minha operação de suínos. Por favor, quero solicitar acesso ao demo."
+    "agnes.whatsapp.message": "Olá, estou interessado em conhecer o AGNES para minha operação de suínos. Por favor, quero solicitar acesso ao demo.",
+    "agnes.whatsapp.section.title": "Interessado no AGNES?",
+    "agnes.whatsapp.section.desc": "Escreva-nos no WhatsApp, conte-nos sobre sua operação de suínos e daremos acesso ao demo.",
+    "agnes.whatsapp.button": "📱 Solicitar acesso ao AGNES"
   },
 
   "it": {
@@ -1130,6 +1142,9 @@
     "agnes.card4.title": "Scalabile",
     "agnes.card4.desc": "Progettato per suini, ma estendibile ad altre specie secondo le tue esigenze.",
     "agnes.whatsapp.button": "📱 Richiedi accesso ad AGNES",
-    "agnes.whatsapp.message": "Ciao, sono interessato a conoscere AGNES per la mia operazione suina. Per favore, voglio richiedere l'accesso alla demo."
+    "agnes.whatsapp.message": "Ciao, sono interessato a conoscere AGNES per la mia operazione suina. Per favore, voglio richiedere l'accesso alla demo.",
+    "agnes.whatsapp.section.title": "Interessato ad AGNES?",
+    "agnes.whatsapp.section.desc": "Scrivici su WhatsApp, parlaci della tua operazione suina e ti daremo accesso alla demo.",
+    "agnes.whatsapp.button": "📱 Richiedi accesso ad AGNES"
   }
 }
