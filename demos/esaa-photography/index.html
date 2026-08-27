@@ -23,14 +23,11 @@
             --shadow-hover: rgba(46, 125, 50, 0.12);
             --badge-bg: #f0f0f0;
             --badge-border: #e0e0e0;
-            --btn-border: #1a1a1a;
-            --btn-text: #1a1a1a;
             --hero-overlay: rgba(0, 0, 0, 0.35);
             --footer-bg: #1a1a1a;
             --footer-text: #999;
             --tribute-bg: #ffffff;
             --tribute-border: #2E7D32;
-            --wave-color: rgba(0, 0, 0, 0.03);
             --menu-bg: rgba(255, 255, 255, 0.97);
             --menu-shadow: rgba(0, 0, 0, 0.1);
             --hamburger-color: #1a1a1a;
@@ -48,14 +45,11 @@
             --shadow-hover: rgba(46, 125, 50, 0.2);
             --badge-bg: #2a2a2a;
             --badge-border: #444;
-            --btn-border: #f0f0f0;
-            --btn-text: #f0f0f0;
             --hero-overlay: rgba(0, 0, 0, 0.55);
             --footer-bg: #0a0a0a;
             --footer-text: #666;
             --tribute-bg: #181818;
             --tribute-border: #4CAF50;
-            --wave-color: rgba(255, 255, 255, 0.02);
             --menu-bg: rgba(26, 26, 26, 0.97);
             --menu-shadow: rgba(0, 0, 0, 0.5);
             --hamburger-color: #f0f0f0;
@@ -131,7 +125,6 @@
             transition: color 0.5s ease;
         }
 
-        /* ===== CONTROLES HEADER (hamburguesa + toggle) ===== */
         .header-controls {
             display: flex;
             align-items: center;
@@ -139,7 +132,6 @@
             z-index: 1001;
         }
 
-        /* ===== HAMBURGUESA ===== */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -170,7 +162,6 @@
             transform: rotate(-45deg) translate(5px, -5px);
         }
 
-        /* ===== TOGGLE MODO OSCURO ===== */
         .dark-toggle {
             background: none;
             border: 1.5px solid var(--border-color);
@@ -193,7 +184,6 @@
             box-shadow: 0 0 20px rgba(46, 125, 50, 0.15);
         }
 
-        /* ===== MENÚ DE NAVEGACIÓN ===== */
         nav {
             display: flex;
             gap: 30px;
@@ -217,7 +207,7 @@
         }
 
         /* ============================================================
-                   MENÚ RESPONSIVE (HAMBURGUESA)
+                   MENÚ RESPONSIVE
                    ============================================================ */
         @media (max-width: 768px) {
             .hamburger {
@@ -259,7 +249,6 @@
                 border-bottom-color: #2E7D32;
             }
 
-            /* Overlay oscuro al abrir menú */
             .menu-overlay {
                 position: fixed;
                 top: 0;
@@ -294,7 +283,6 @@
             transition: background 0.5s ease;
         }
 
-        /* Contenedor de las imágenes en fade */
         .hero-slides {
             position: absolute;
             top: 0;
@@ -342,7 +330,6 @@
             transition: background 0.5s ease;
         }
 
-        /* Indicadores del carrusel (puntos) */
         .hero-indicators {
             position: absolute;
             bottom: 25px;
@@ -374,7 +361,6 @@
             background: rgba(255, 255, 255, 0.7);
         }
 
-        /* Contenido del hero (por encima de las imágenes) */
         .hero-content {
             position: relative;
             z-index: 3;
@@ -428,7 +414,7 @@
         }
 
         /* ============================================================
-                   GALERÍA - 6 IMÁGENES
+                   GALERÍA - FADE-IN ESCALONADO
                    ============================================================ */
         .section-title {
             font-family: 'Playfair Display', serif;
@@ -439,6 +425,7 @@
             color: var(--text-primary);
             transition: color 0.5s ease;
         }
+
         .section-subtitle {
             text-align: center;
             color: var(--text-muted);
@@ -456,6 +443,7 @@
             margin-bottom: 60px;
         }
 
+        /* ===== ESTADO INICIAL DE CADA TARJETA (INVISIBLE) ===== */
         .photo-card {
             background: var(--bg-card);
             border-radius: 6px;
@@ -463,10 +451,22 @@
             box-shadow: 0 4px 20px var(--shadow-color);
             transition: all 0.4s ease;
             position: relative;
+
+            /* Estado inicial: invisible, escalada y desplazada */
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.4s ease;
         }
 
+        /* ===== ESTADO VISIBLE (cuando la clase .visible se añade) ===== */
+        .photo-card.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        /* ===== HOVER (se mantiene igual) ===== */
         .photo-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-8px) scale(1.01);
             box-shadow: 0 12px 40px var(--shadow-hover);
         }
 
@@ -739,7 +739,7 @@
 </head>
 <body>
 
-    <!-- ===== OVERLAY DEL MENÚ (solo visible en móvil) ===== -->
+    <!-- ===== OVERLAY DEL MENÚ ===== -->
     <div class="menu-overlay" id="menuOverlay"></div>
 
     <div class="container">
@@ -751,7 +751,6 @@
                 <p>Legado · Mirada · Luz</p>
             </div>
 
-            <!-- Controles: hamburguesa + toggle -->
             <div class="header-controls">
                 <button class="dark-toggle" id="darkToggle" aria-label="Cambiar modo oscuro">🌓</button>
                 <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -761,7 +760,6 @@
                 </button>
             </div>
 
-            <!-- Menú de navegación -->
             <nav id="mainNav">
                 <a href="#">Inicio</a>
                 <a href="#">Legado</a>
@@ -770,36 +768,28 @@
             </nav>
         </header>
 
-        <!-- ===== HERO CON FADE AUTOMÁTICO ===== -->
+        <!-- ===== HERO ===== -->
         <section class="hero" id="hero">
-
-            <!-- Slides -->
             <div class="hero-slides">
-                <!-- Slide 1 -->
                 <div class="hero-slide active" data-index="0">
                     <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop&crop=center&auto=format" alt="Paisaje 1" />
                 </div>
-                <!-- Slide 2 -->
                 <div class="hero-slide" data-index="1">
                     <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=600&fit=crop&crop=center&auto=format" alt="Paisaje 2" />
                 </div>
-                <!-- Slide 3 -->
                 <div class="hero-slide" data-index="2">
                     <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=600&fit=crop&crop=center&auto=format" alt="Paisaje 3" />
                 </div>
             </div>
 
-            <!-- Overlay oscuro -->
             <div class="hero-overlay"></div>
 
-            <!-- Indicadores (puntos) -->
             <div class="hero-indicators" id="heroIndicators">
                 <button class="dot active" data-index="0" aria-label="Slide 1"></button>
                 <button class="dot" data-index="1" aria-label="Slide 2"></button>
                 <button class="dot" data-index="2" aria-label="Slide 3"></button>
             </div>
 
-            <!-- Contenido -->
             <div class="hero-content">
                 <h2>
                     Dos miradas,<br />
@@ -817,8 +807,9 @@
         <h2 class="section-title">Galería</h2>
         <p class="section-subtitle">Una selección de obras · Legado y presente</p>
 
-        <div class="gallery-grid">
-            <div class="photo-card">
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Cada tarjeta tiene un delay diferente (se aplica vía JS) -->
+            <div class="photo-card" data-delay="0">
                 <div class="image-wrapper">
                     <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&crop=center&auto=format" alt="Fotografía de Henry Joe" />
                 </div>
@@ -829,7 +820,7 @@
                 </div>
             </div>
 
-            <div class="photo-card">
+            <div class="photo-card" data-delay="150">
                 <div class="image-wrapper">
                     <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=300&fit=crop&crop=center&auto=format" alt="Fotografía de Henry Joe" />
                 </div>
@@ -840,7 +831,7 @@
                 </div>
             </div>
 
-            <div class="photo-card">
+            <div class="photo-card" data-delay="300">
                 <div class="image-wrapper">
                     <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop&crop=center&auto=format" alt="Fotografía de Henry Jorge" />
                 </div>
@@ -851,7 +842,7 @@
                 </div>
             </div>
 
-            <div class="photo-card">
+            <div class="photo-card" data-delay="450">
                 <div class="image-wrapper">
                     <img src="https://images.unsplash.com/photo-1470071459604-7b7ec3ba3dc4?w=400&h=300&fit=crop&crop=center&auto=format" alt="Fotografía de Henry Jorge" />
                 </div>
@@ -862,7 +853,7 @@
                 </div>
             </div>
 
-            <div class="photo-card">
+            <div class="photo-card" data-delay="600">
                 <div class="image-wrapper">
                     <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop&crop=center&auto=format" alt="Fotografía de Henry Joe" />
                 </div>
@@ -873,7 +864,7 @@
                 </div>
             </div>
 
-            <div class="photo-card">
+            <div class="photo-card" data-delay="750">
                 <div class="image-wrapper">
                     <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&h=300&fit=crop&crop=center&auto=format" alt="Fotografía de Henry Jorge" />
                 </div>
@@ -954,12 +945,10 @@
         hamburger.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', closeMenu);
 
-        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('#mainNav a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
 
-        // Cerrar menú al redimensionar a desktop
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 closeMenu();
@@ -973,14 +962,11 @@
         const dots = document.querySelectorAll('.dot');
         let currentSlide = 0;
         let slideInterval;
-        const INTERVAL_TIME = 4500; // 4.5 segundos
+        const INTERVAL_TIME = 4500;
 
         function goToSlide(index) {
-            // Quitar active de todos
             slides.forEach(s => s.classList.remove('active'));
             dots.forEach(d => d.classList.remove('active'));
-
-            // Añadir active al slide y dot correspondiente
             slides[index].classList.add('active');
             dots[index].classList.add('active');
             currentSlide = index;
@@ -1003,22 +989,52 @@
             }
         }
 
-        // Evento para los dots (clic manual)
         dots.forEach(dot => {
             dot.addEventListener('click', () => {
                 const index = parseInt(dot.getAttribute('data-index'));
                 goToSlide(index);
-                startAutoplay(); // Reiniciar el autoplay tras interacción manual
+                startAutoplay();
             });
         });
 
-        // Pausar autoplay al pasar el mouse por el hero
         const heroSection = document.getElementById('hero');
         heroSection.addEventListener('mouseenter', stopAutoplay);
         heroSection.addEventListener('mouseleave', startAutoplay);
 
-        // Iniciar autoplay
         startAutoplay();
+
+        // ============================================
+        // 4. FADE-IN ESCALONADO DE LA GALERÍA
+        // ============================================
+        const galleryCards = document.querySelectorAll('.photo-card');
+
+        // Configuración del Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
+                    const delay = parseInt(card.getAttribute('data-delay')) || 0;
+
+                    // Aplicar el delay y añadir la clase 'visible'
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, delay);
+
+                    // Dejar de observar esta tarjeta una vez que se activó
+                    observer.unobserve(card);
+                }
+            });
+        }, {
+            // Se activa cuando el 15% de la tarjeta es visible
+            threshold: 0.15,
+            // Margen adicional para activar un poco antes
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observar cada tarjeta
+        galleryCards.forEach(card => {
+            observer.observe(card);
+        });
     </script>
 
 </body>
