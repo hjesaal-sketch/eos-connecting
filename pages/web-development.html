@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Development | EOS Connecting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  
+  <script src="/js/languages.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="/index.html#home" class="logo-nav">EOS Connecting</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html#services" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="/pages/developing.html" class="nav-link" data-i18n="nav.products">Sistemas</a></li>
+        <li><a href="/pages/academy.html" class="nav-link" data-i18n="nav.academy">EOS Academy</a></li>
+        <li><a href="/index.html#ecosystem" class="nav-link" data-i18n="nav.ecosystem">Ecosistema</a></li>
+        <li><a href="/index.html#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+        <li>
+          <select class="lang-select" id="langSelect">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="pt">PT</option>
+            <option value="it">IT</option>
+          </select>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 100px;">
+
+    <!-- HERO -->
+    <section style="padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(0,229,255,0.05), rgba(166,74,255,0.05));">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <span style="display: inline-block; padding: 0.4rem 1.2rem; border-radius: 50px; background: rgba(0,229,255,0.1); border: 1px solid var(--cyan); color: var(--cyan); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 1.5rem;" data-i18n="promo.badge">
+          OFERTA DE LANZAMIENTO
+        </span>
+        
+        <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem;" data-i18n="promo.title">
+          Sitios web profesionales desde <span class="cyan-text">$99</span>
+        </h1>
+        
+        <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem;" data-i18n="promo.subtitle">
+          Diseño personalizado · Responsive · SEO básico · Publicación incluida
+        </p>
+        
+        <p style="display: inline-block; padding: 0.6rem 1.5rem; background: rgba(255,68,102,0.15); border: 1px solid var(--red); color: var(--red); border-radius: 8px; font-weight: 700; margin-bottom: 1rem;" data-i18n="promo.slots">
+          🔥 Solo 10 cupos por servicio
+        </p>
+        
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;" data-i18n="promo.deadline">
+          Promoción válida del 1 al 31 de octubre
+        </p>
+        
+        <div>
+          <a href="https://wa.me/584121590957?text=Hola%2C%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20sitios%20web.%20%C2%BFQuedan%20cupos%3F" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="cta-button" 
+             style="font-size: 1.1rem; padding: 1.2rem 3rem; display: inline-block;"
+             data-i18n="promo.cta.button">
+            💬 Quiero mi sitio web
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUADRO COMPARATIVO -->
+    <section style="padding: 5rem 2rem; background: var(--dark-card);">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem;" data-i18n="promo.table.heading">
+          Planes y precios
+        </h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem;" data-i18n="promo.table.subtitle">
+          Elige el plan que mejor se adapte a tu proyecto.
+        </p>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
+            <thead>
+              <tr>
+                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid rgba(255,255,255,0.1); color: var(--text-muted); font-weight: 600;"></th>
+                <th style="padding: 1rem; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.1); color: var(--cyan); font-size: 1.1rem;" data-i18n="promo.table.landing">Landing Page</th>
+                <th style="padding: 1rem; text-align: center; border-bottom: 2px solid var(--cyan); color: var(--cyan); font-size: 1.1rem; background: rgba(0,229,255,0.05);" data-i18n="promo.table.pro">Sitio Profesional</th>
+                <th style="padding: 1rem; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.1); color: var(--text); font-size: 1.1rem;" data-i18n="promo.table.custom">A medida</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.promoPrice">Precio promoción</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);"><strong style="color: var(--cyan); font-size: 1.2rem;">$99</strong></td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);"><strong style="color: var(--cyan); font-size: 1.2rem;">$350</strong></td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.quote">Cotizar</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.normalPrice">Precio normal</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);"><s style="color: var(--text-muted);">$150</s></td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);"><s style="color: var(--text-muted);">$550</s></td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);"><s>Desde $700+</s></td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.onePage">1 página</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.according">Según proyecto</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.fourPages">Hasta 4 páginas</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.according">Según proyecto</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.customDesign">Diseño personalizado</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">✅</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.responsive">Responsive</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">✅</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.seo">SEO básico</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">✅</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.contact">WhatsApp / formularios</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">✅</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">✅</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.cms">CMS / administración</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">✅</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.ecommerce">E-commerce</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">✅</td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-muted);" data-i18n="promo.table.automation">Automatizaciones / APIs</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.03);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,255,0.05);">—</td>
+                <td style="padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">✅</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="https://wa.me/584121590957?text=Hola%2C%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20sitios%20web.%20%C2%BFQuedan%20cupos%3F" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="cta-button" 
+             style="font-size: 1rem; padding: 1rem 2.5rem; display: inline-block;"
+             data-i18n="promo.cta.button">
+            💬 Quiero mi sitio web
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section style="padding: 5rem 2rem; background: var(--dark-bg);">
+      <div style="max-width: 1400px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem;" data-i18n="promo.portfolio.title">
+          Mira lo que podemos hacer
+        </h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem;" data-i18n="promo.portfolio.subtitle">
+          Sitios reales, funcionando. Haz clic en cualquiera para visitarlo.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          
+          <!-- Knots & Blades -->
+          <div class="card" style="overflow: hidden; padding: 0;">
+            <a href="https://www.knotsandblades.com/es/home" target="_blank" rel="noopener noreferrer" style="display: block;">
+              <img src="/assets/images/promocion/knots-and-blades-capture.webp" alt="Knots & Blades" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            </a>
+            <div style="padding: 1.5rem;">
+              <h3 style="color: var(--red); margin-bottom: 0.5rem;">Knots & Blades</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="promo.portfolio.knb.desc">
+                Universo narrativo y cultural. Sitio multiidioma con estética propia.
+              </p>
+              <a href="https://www.knotsandblades.com/es/home" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--red); color: var(--red); display: inline-block; font-size: 0.8rem;" data-i18n="promo.portfolio.cta">
+                Ver sitio →
+              </a>
+            </div>
+          </div>
+
+          <!-- EOS Connecting -->
+          <div class="card" style="overflow: hidden; padding: 0;">
+            <a href="https://eos-connecting.vercel.app/index.html#home" target="_blank" rel="noopener noreferrer" style="display: block;">
+              <img src="/assets/images/promocion/eos-connecting-capture.webp" alt="EOS Connecting" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            </a>
+            <div style="padding: 1.5rem;">
+              <h3 style="color: var(--cyan); margin-bottom: 0.5rem;">EOS Connecting</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="promo.portfolio.eos.desc">
+                Sitio corporativo con i18n, secciones de servicios y portafolio.
+              </p>
+              <a href="https://eos-connecting.vercel.app/index.html#home" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--cyan); color: var(--cyan); display: inline-block; font-size: 0.8rem;" data-i18n="promo.portfolio.cta">
+                Ver sitio →
+              </a>
+            </div>
+          </div>
+
+          <!-- Esaá Photography -->
+          <div class="card" style="overflow: hidden; padding: 0;">
+            <a href="https://esaa-photography.vercel.app/" target="_blank" rel="noopener noreferrer" style="display: block;">
+              <img src="/assets/images/promocion/esaa-photography-capture.webp" alt="Esaá Photography" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            </a>
+            <div style="padding: 1.5rem;">
+              <h3 style="color: var(--purple); margin-bottom: 0.5rem;">Esaá Photography</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="promo.portfolio.esaa.desc">
+                Portafolio fotográfico minimalista con galería visual.
+              </p>
+              <a href="https://esaa-photography.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--purple); color: var(--purple); display: inline-block; font-size: 0.8rem;" data-i18n="promo.portfolio.cta">
+                Ver sitio →
+              </a>
+            </div>
+          </div>
+
+          <!-- Legado Bruzzoni -->
+          <div class="card" style="overflow: hidden; padding: 0;">
+            <a href="https://legado-bruzzoni-okyx.vercel.app/es/" target="_blank" rel="noopener noreferrer" style="display: block;">
+              <img src="/assets/images/promocion/legado-bruzzoni-capture.webp" alt="Legado Bruzzoni" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            </a>
+            <div style="padding: 1.5rem;">
+              <h3 style="color: var(--green); margin-bottom: 0.5rem;">Legado Bruzzoni</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="promo.portfolio.legado.desc">
+                Sitio de patrimonio familiar y turismo rural. Multiidioma.
+              </p>
+              <a href="https://legado-bruzzoni-okyx.vercel.app/es/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--green); color: var(--green); display: inline-block; font-size: 0.8rem;" data-i18n="promo.portfolio.cta">
+                Ver sitio →
+              </a>
+            </div>
+          </div>
+
+          <!-- Breidy Cobo Studio -->
+          <div class="card" style="overflow: hidden; padding: 0;">
+            <a href="https://breidy-cobo-studio.vercel.app/index.html" target="_blank" rel="noopener noreferrer" style="display: block;">
+              <img src="/assets/images/promocion/breidy-cobo-capture.webp" alt="Breidy Cobo Studio" style="width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            </a>
+            <div style="padding: 1.5rem;">
+              <h3 style="color: var(--yellow); margin-bottom: 0.5rem;">Breidy Cobo Studio</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="promo.portfolio.breidy.desc">
+                Portafolio de arte contemporáneo. Galería visual y narrativa.
+              </p>
+              <a href="https://breidy-cobo-studio.vercel.app/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--yellow); color: var(--yellow); display: inline-block; font-size: 0.8rem;" data-i18n="promo.portfolio.cta">
+                Ver sitio →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SISTEMAS A MEDIDA -->
+    <section style="padding: 5rem 2rem; background: var(--dark-card);">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; font-size: clamp(1.8rem, 4vw, 2.2rem); margin-bottom: 1rem;" data-i18n="promo.systems.title">
+          También desarrollamos sistemas a medida
+        </h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem;" data-i18n="promo.systems.subtitle">
+          Cuando tu negocio necesita más que un sitio web, construimos la herramienta completa.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          
+          <div class="card" style="overflow: hidden; padding: 0;">
+            <a href="https://agnes-porcino.vercel.app/login" target="_blank" rel="noopener noreferrer" style="display: block;">
+              <img src="/assets/images/promocion/agnes-capture.webp" alt="AGNES" style="width: 100%; height: 200px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            </a>
+            <div style="padding: 1.5rem;">
+              <h3 style="color: var(--agnes-green); margin-bottom: 0.5rem;">AGNES</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="promo.systems.agnes.desc">
+                Sistema de gestión porcina: genética, sanidad y trazabilidad en tiempo real.
+              </p>
+              <a href="https://agnes-porcino.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--agnes-green); color: var(--agnes-green); display: inline-block; font-size: 0.8rem;" data-i18n="promo.systems.cta">
+                Ver sistema →
+              </a>
+            </div>
+          </div>
+
+          <div class="card" style="overflow: hidden; padding: 0;">
+            <a href="https://condormanage-dpx7.vercel.app/es/dashboard/admin" target="_blank" rel="noopener noreferrer" style="display: block;">
+              <img src="/assets/images/promocion/condor-manage-capture.webp" alt="CondorManage" style="width: 100%; height: 200px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            </a>
+            <div style="padding: 1.5rem;">
+              <h3 style="color: var(--nexus-blue); margin-bottom: 0.5rem;">CondorManage</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="promo.systems.condor.desc">
+                Plataforma de gestión administrativa con dashboard en tiempo real.
+              </p>
+              <a href="https://condormanage-dpx7.vercel.app/es/dashboard/admin" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--nexus-blue); color: var(--nexus-blue); display: inline-block; font-size: 0.8rem;" data-i18n="promo.systems.cta">
+                Ver sistema →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section style="padding: 5rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(166,74,255,0.08));">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem;" data-i18n="promo.cta.title">
+          Solo quedan 10 cupos por servicio
+        </h2>
+        <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;" data-i18n="promo.cta.desc">
+          Escríbenos por WhatsApp y reserva el tuyo antes de que se agoten.
+        </p>
+        <a href="https://wa.me/584121590957?text=Hola%2C%20quiero%20aprovechar%20la%20promoci%C3%B3n%20de%20sitios%20web.%20%C2%BFQuedan%20cupos%3F" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="cta-button" 
+           style="font-size: 1.1rem; padding: 1.2rem 3rem; display: inline-block;"
+           data-i18n="promo.cta.button">
+          💬 Quiero mi sitio web
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="/assets/images/Logo-eos-connecting-sf.png" alt="EOS Connecting Logo">
+      </div>
+      <h3 data-i18n="footer.title">EOS Connecting</h3>
+      <p data-i18n="footer.tagline">Software. IA. Resultados.</p>
+      <p class="copyright" data-i18n="footer.copy">
+        © 2025 EOS Connecting. Parte del ecosistema Odyssey Ecosystem.
+      </p>
+      <p class="copyright" data-i18n="footer.developed" style="margin-top:0.5rem;">
+        Desarrollado por EOS Connecting | Dev Henry Esaá
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
