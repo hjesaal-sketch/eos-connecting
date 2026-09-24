@@ -239,6 +239,7 @@
     "promo.table.price150": "$150",
     "promo.table.price550": "$550",
     "promo.table.from700": "Desde $700+",
+    "promo.table.notApplicable": "No aplica",
 
     "nexus.download.options": "Ver opciones de licencia",
     "nexus.pricing.yearly.badge": "RECOMENDADO",
@@ -499,6 +500,7 @@
     "promo.table.price150": "$150",
     "promo.table.price550": "$550",
     "promo.table.from700": "From $700+",
+    "promo.table.notApplicable": "Not applicable",
 
     "nexus.subtitle": "Medical asset control and fiscal shielding. Avoid losses and ensure legal traceability.",
     "nexus.download.requirements": "Requirements: Windows 10/11, 4GB RAM, 500MB space",
@@ -795,6 +797,7 @@
     "promo.table.price150": "$150",
     "promo.table.price550": "$550",
     "promo.table.from700": "Ab $700+",
+    "promo.table.notApplicable": "Nicht zutreffend",
 
     "nexus.subtitle": "Kontrolle medizinischer Vermögenswerte und steuerliche Absicherung. Vermeiden Sie Verluste und gewährleisten Sie die rechtliche Rückverfolgbarkeit.",
     "nexus.download.requirements": "Anforderungen: Windows 10/11, 4GB RAM, 500MB Speicherplatz",
@@ -1091,6 +1094,7 @@
     "promo.table.price150": "$150",
     "promo.table.price550": "$550",
     "promo.table.from700": "A partir de $700+",
+    "promo.table.notApplicable": "Não se aplica",
 
     "nexus.subtitle": "Controle de ativos médicos e blindagem fiscal. Evite perdas e garanta a rastreabilidade legal.",
     "nexus.download.requirements": "Requisitos: Windows 10/11, 4GB RAM, 500MB de espaço",
@@ -1387,6 +1391,7 @@
     "promo.table.price150": "$150",
     "promo.table.price550": "$550",
     "promo.table.from700": "Da $700+",
+    "promo.table.notApplicable": "Non applicabile",
 
     "nexus.subtitle": "Controllo delle risorse mediche e protezione fiscale. Evita perdite e garantisci la tracciabilità legale.",
     "nexus.download.requirements": "Requisiti: Windows 10/11, 4GB RAM, 500MB di spazio",
