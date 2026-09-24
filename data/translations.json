@@ -211,6 +211,9 @@
     "promo.systems.condor.desc": "Plataforma de gestión administrativa con dashboard en tiempo real.",
     "promo.cta.title": "Solo quedan 10 cupos",
     "promo.cta.desc": "Escríbenos por WhatsApp y reserva el tuyo antes de que se agoten.",
+    "promo.cta.button": "💬 Quiero mi sitio web",
+    "promo.portfolio.cta": "Ver sitio →",
+    "promo.systems.cta": "Ver sistema →",
 
     "nexus.download.options": "Ver opciones de licencia",
     "nexus.pricing.yearly.badge": "RECOMENDADO",
@@ -443,6 +446,9 @@
     "promo.systems.condor.desc": "Administrative management platform with real-time dashboard.",
     "promo.cta.title": "Only 10 spots left",
     "promo.cta.desc": "Write to us on WhatsApp and reserve yours before they run out.",
+    "promo.cta.button": "💬 I want my website",
+    "promo.portfolio.cta": "View site →",
+    "promo.systems.cta": "View system →",
 
     "nexus.subtitle": "Medical asset control and fiscal shielding. Avoid losses and ensure legal traceability.",
     "nexus.download.requirements": "Requirements: Windows 10/11, 4GB RAM, 500MB space",
@@ -711,6 +717,9 @@
     "promo.systems.condor.desc": "Verwaltungsplattform mit Echtzeit-Dashboard.",
     "promo.cta.title": "Nur noch 10 Plätze",
     "promo.cta.desc": "Schreiben Sie uns auf WhatsApp und reservieren Sie Ihren, bevor sie weg sind.",
+    "promo.cta.button": "💬 Ich möchte meine Website",
+    "promo.portfolio.cta": "Website ansehen →",
+    "promo.systems.cta": "System ansehen →",
 
     "nexus.subtitle": "Kontrolle medizinischer Vermögenswerte und steuerliche Absicherung. Vermeiden Sie Verluste und gewährleisten Sie die rechtliche Rückverfolgbarkeit.",
     "nexus.download.requirements": "Anforderungen: Windows 10/11, 4GB RAM, 500MB Speicherplatz",
@@ -979,6 +988,9 @@
     "promo.systems.condor.desc": "Plataforma de gestão administrativa com dashboard em tempo real.",
     "promo.cta.title": "Restam apenas 10 vagas",
     "promo.cta.desc": "Escreva-nos no WhatsApp e reserve a sua antes que acabem.",
+    "promo.cta.button": "💬 Quero meu site",
+    "promo.portfolio.cta": "Ver site →",
+    "promo.systems.cta": "Ver sistema →",
 
     "nexus.subtitle": "Controle de ativos médicos e blindagem fiscal. Evite perdas e garanta a rastreabilidade legal.",
     "nexus.download.requirements": "Requisitos: Windows 10/11, 4GB RAM, 500MB de espaço",
@@ -1247,6 +1259,9 @@
     "promo.systems.condor.desc": "Piattaforma di gestione amministrativa con dashboard in tempo reale.",
     "promo.cta.title": "Restano solo 10 posti",
     "promo.cta.desc": "Scrivici su WhatsApp e prenota il tuo prima che finiscano.",
+    "promo.cta.button": "💬 Voglio il mio sito web",
+    "promo.portfolio.cta": "Vedi sito →",
+    "promo.systems.cta": "Vedi sistema →",
 
     "nexus.subtitle": "Controllo delle risorse mediche e protezione fiscale. Evita perdite e garantisci la tracciabilità legale.",
     "nexus.download.requirements": "Requisiti: Windows 10/11, 4GB RAM, 500MB di spazio",
