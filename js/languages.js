@@ -73,8 +73,21 @@ function applyTranslations(lang) {
     for (const el of elements) {
       const key = el.getAttribute("data-i18n");
       const newText = dict[key];
-      if (newText && el.textContent !== newText) {
-        el.textContent = newText;
+      if (!newText) continue;
+
+      // Detectar si el texto contiene HTML (etiquetas)
+      const hasHTML = /<[a-z][\s\S]*>/i.test(newText);
+
+      if (hasHTML) {
+        // Si tiene HTML, usar innerHTML
+        if (el.innerHTML !== newText) {
+          el.innerHTML = newText;
+        }
+      } else {
+        // Si es texto plano, usar textContent (más seguro y rápido)
+        if (el.textContent !== newText) {
+          el.textContent = newText;
+        }
       }
     }
   });
