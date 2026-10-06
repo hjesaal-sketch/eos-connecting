@@ -1,0 +1,91 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 11, 16, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+  padding: 1rem 0;
+  transition: background 0.3s ease;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-nav {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--cyan);
+  text-decoration: none;
+  text-shadow: 0 0 10px var(--cyan-glow);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--cyan);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cyan);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.lang-select {
+  background: transparent;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lang-select option {
+  background: var(--dark-bg);
+  color: var(--text);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--cyan);
+  border-radius: 2px;
+  transition: 0.3s;
+}

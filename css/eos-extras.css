@@ -1,0 +1,324 @@
+/* Trust strip */
+.trust-strip {
+  padding: 2rem 0;
+  background: var(--dark-card);
+  border-top: 1px solid rgba(0, 229, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+}
+
+.trust-strip ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trust-strip li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.trust-strip li strong {
+  color: var(--cyan);
+}
+
+/* Productos: colores específicos */
+.condor-card { border-left: 5px solid var(--condor-purple); }
+.condor-card .btn-outline { border-color: var(--condor-purple); color: var(--condor-purple); }
+.condor-card .btn-cyan { background: var(--condor-purple); color: #fff; }
+.condor-badge { color: var(--condor-purple); border-color: var(--condor-purple); }
+
+.analytics-card { border-left: 5px solid var(--analytics-red); }
+.analytics-card .btn-outline { border-color: var(--analytics-red); color: var(--analytics-red); }
+.analytics-card .btn-cyan { background: var(--analytics-red); color: #fff; }
+.analytics-badge { color: var(--analytics-red); border-color: var(--analytics-red); }
+
+.product-badge {
+  font-weight: 800;
+  border: 1px solid;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+/* JH Duo */
+.jhduo-section {
+  padding: 5rem 0;
+  background:
+    radial-gradient(circle at 85% 30%, rgba(255, 106, 0, 0.18), transparent 30%),
+    linear-gradient(135deg, #090909 0%, #111 55%, #160d07 100%);
+}
+
+.jhduo-card {
+  position: relative;
+  z-index: 1;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  border: 1px solid rgba(255, 106, 0, 0.55);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(255, 106, 0, 0.10), rgba(15, 15, 15, 0.92));
+  box-shadow: 0 0 40px rgba(255, 106, 0, 0.10), inset 0 0 35px rgba(255, 106, 0, 0.035);
+}
+
+.jhduo-kicker {
+  color: var(--jh-orange-2);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.jhduo-card h2 {
+  color: var(--text);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.jhduo-card p {
+  max-width: 760px;
+  color: #c8c8c8;
+}
+
+.jhduo-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem;
+  margin: 1.6rem 0 2rem;
+}
+
+.jhduo-service {
+  padding: 1rem;
+  border: 1px solid rgba(255, 106, 0, 0.22);
+  border-radius: 12px;
+  background: rgba(255, 106, 0, 0.055);
+  color: #eee;
+}
+
+.jhduo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--jh-orange), var(--jh-orange-2));
+  color: #090909 !important;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 0 22px var(--jh-glow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.jhduo-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 34px rgba(255, 106, 0, 0.48);
+}
+
+/* Proceso */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.process-step {
+  background: var(--dark-card);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  position: relative;
+  transition: 0.3s;
+}
+
+.process-step:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+}
+
+.process-step .num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cyan);
+  opacity: 0.4;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.process-step h3 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Equipo */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.team-card {
+  background: var(--dark-card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+}
+
+.team-card h3 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-card .role {
+  color: var(--cyan);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.team-card a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.team-card a:hover {
+  color: var(--cyan);
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 900px;
+  margin: 3rem auto 0;
+}
+
+.faq-item {
+  background: var(--dark-card);
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.faq-item[open] {
+  border-color: var(--cyan);
+}
+
+.faq-item summary {
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: '+';
+  color: var(--cyan);
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item .answer {
+  padding: 0 1.5rem 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Formulario de contacto */
+.contact-form {
+  max-width: 700px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background: var(--dark-bg);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.1);
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Navbar: item JH Duo */
+.nav-link--jhduo {
+  color: var(--jh-orange-2) !important;
+  font-weight: 700;
+}
+
+.nav-link--jhduo::after {
+  background: var(--jh-orange-2) !important;
+}

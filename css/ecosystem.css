@@ -1,0 +1,74 @@
+.ecosystem-full {
+  padding: 6rem 0;
+  background: var(--dark-card);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.ecosystem-full h2 {
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.ecosystem-full .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.ecosystem-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badge {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.badge-agro {
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.badge-health {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.badge-events {
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+}
+
+.badge-gaming {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+.ecosystem-logo {
+  width: 150px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ecosystem-item p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,51 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --dark-bg: #0a0b10;
+  --dark-card: #111318;
+  --cyan: #00e5ff;
+  --cyan-glow: rgba(0, 229, 255, 0.5);
+  --green: #00ff88;
+  --blue: #00d4ff;
+  --yellow: #ffdd00;
+  --red: #ff4466;
+  --purple: #a64aff;
+  --text: #e8eaed;
+  --text-muted: #9aa0a6;
+  --grid-line: rgba(0, 229, 255, 0.03);
+  --agnes-green: #22c55e;
+  --nexus-blue: #2f81f7;
+
+  /* Nuevas */
+  --condor-purple: #a64aff;
+  --condor-glow: rgba(166, 74, 255, 0.5);
+  --analytics-red: #ff0040;
+  --analytics-glow: rgba(255, 0, 64, 0.5);
+  --jh-orange: #ff6a00;
+  --jh-orange-2: #ff9d2e;
+  --jh-glow: rgba(255, 106, 0, 0.32);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--dark-bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}

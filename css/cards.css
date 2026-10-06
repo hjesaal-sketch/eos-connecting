@@ -1,0 +1,52 @@
+.card {
+  background: var(--dark-card);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-5px);
+}
+
+.agnes-card { border-left: 5px solid var(--agnes-green); }
+.nexus-card { border-left: 5px solid var(--nexus-blue); }
+
+.btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.btn-cyan {
+  background: var(--cyan);
+  color: #000;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+}
+
+.agnes-card .btn-outline {
+  border-color: var(--agnes-green);
+  color: var(--agnes-green);
+}
+
+.nexus-card .btn-cyan {
+  background: var(--nexus-blue);
+  color: #fff;
+}
+
+.nexus-card .btn-outline {
+  border-color: var(--nexus-blue);
+  color: var(--nexus-blue);
+}
