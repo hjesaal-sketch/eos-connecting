@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='es' class=''>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -102,10 +102,11 @@
     <div class="container nav-content">
       <a href="/" class="logo-nav">EOS Connecting</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#services" class="nav-link">Servicios</a></li>
-        <li><a href="#products" class="nav-link">Productos</a></li>
-        <li><a href="#jhduo" class="nav-link">JH Duo</a></li>
-        <li><a href="/pages/academy.html" class="nav-link" data-i18n="nav.academy">EOS Academy</a></li>
+        <li><a href="#products" class="nav-link" data-i18n="nav.products">Productos</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="#process" class="nav-link" data-i18n="nav.process">Proceso</a></li>
+        <li><a href="#academy" class="nav-link" data-i18n="nav.academy">EOS Academy</a></li>
+        <li><a href="#jhduo" class="nav-link nav-link--jhduo" data-i18n="nav.jhduo">JH Duo</a></li>
         <li><a href="#ecosystem" class="nav-link" data-i18n="nav.ecosystem">Ecosistema</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
         <li>
@@ -133,15 +134,91 @@
         <img src="/assets/images/Logo-eos-connecting-sf.png" alt="EOS Connecting Logo" class="hero-logo">
       </div>
       <h1 data-i18n="hero.title">
-        Software a Medida, Análisis de Data<br>
-        <span class="cyan-text">& Soluciones con IA</span>
+        Software que resuelve.<br>
+        <span class="cyan-text">SaaS que escala.</span>
       </h1>
       <p class="hero-subtitle" data-i18n="hero.subtitle">
-        Conectamos tecnología con resultados. Desarrollamos software, SaaS, aplicaciones, análisis de datos y soluciones con inteligencia artificial.
+        Productos SaaS y software a medida para operaciones reales. NexusCare Assets, AGNES, Condor Manage y Eos Analytics. Disponible en 5 idiomas.
       </p>
       <div class="hero-cta-wrapper">
-        <button class="cta-button" onclick="location.href='#services'" data-i18n="hero.cta.services">Servicios</button>
-        <button class="cta-button cta-button--outline" onclick="location.href='#academy'" data-i18n="hero.cta.academy">EOS Academy</button>
+        <button class="cta-button" onclick="location.href='#products'" data-i18n="hero.cta.products">Ver productos</button>
+        <button class="cta-button cta-button--outline" onclick="location.href='#jhduo'" data-i18n="hero.cta.jhduo">Ir a JH Duo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="trust-strip">
+    <div class="container">
+      <ul>
+        <li data-i18n="trust.languages">Disponible en <strong>5 idiomas</strong></li>
+        <li data-i18n="trust.production"><strong>Software listo</strong> para producción</li>
+        <li data-i18n="trust.pilots"><strong>Pilotos abiertos</strong> en agro y salud</li>
+        <li data-i18n="trust.experience">Trayectoria <strong>desde 2009</strong></li>
+        <li data-i18n="trust.founders">Soporte directo de los <strong>founders</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="section-padding">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2.5rem;" data-i18n="products.title">Sistemas de Alto Impacto</h2>
+
+      <div class="grid-auto">
+
+        <!-- NexusCare (disponible) -->
+        <div class="card nexus-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3><a href="/pages/nexuscare.html" style="color:inherit; text-decoration:none;" data-i18n="products.nexus.title">NexusCare Assets</a></h3>
+            <span class="product-badge" style="color:var(--nexus-blue); border-color:var(--nexus-blue);" data-i18n="products.nexus.badge">HEALTH</span>
+          </div>
+          <p data-i18n="products.nexus.desc">Control de activos médicos y blindaje fiscal. Evita mermas y asegura la trazabilidad legal.</p>
+          <div style="display:flex; gap:10px; margin-top:1.5rem;">
+            <button class="btn btn-cyan" style="flex:1;" onclick="window.location.href='/pages/nexuscare.html';" data-i18n="products.nexus.cta.main">Ver más</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/nexuscare.html#licencias';" data-i18n="products.nexus.cta.secondary">Licencias</button>
+          </div>
+        </div>
+
+        <!-- AGNES (piloto) -->
+        <div class="card agnes-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3><a href="/pages/agnes.html" style="color:inherit; text-decoration:none;" data-i18n="products.agnes.title">AGNES</a></h3>
+            <span class="product-badge" style="color:var(--agnes-green); border-color:var(--agnes-green);" data-i18n="products.agnes.badge">AGRO</span>
+          </div>
+          <p data-i18n="products.agnes.desc">Inteligencia porcina total. Gestión de genética y salud con trazabilidad absoluta en tiempo real.</p>
+          <div style="display:flex; gap:10px; margin-top:1.5rem;">
+            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/agnes.html';" data-i18n="products.agnes.cta.main">Ver más</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/agnes.html#piloto';" data-i18n="products.agnes.cta.secondary">Solicitar piloto</button>
+          </div>
+        </div>
+
+        <!-- Condor Manage (beta) -->
+        <div class="card condor-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3><a href="/pages/condor-manage.html" style="color:inherit; text-decoration:none;" data-i18n="products.condor.title">Condor Manage</a></h3>
+            <span class="product-badge condor-badge" data-i18n="products.condor.badge">PROPTECH</span>
+          </div>
+          <p data-i18n="products.condor.desc">SaaS de gestión de condominios en desarrollo avanzado. Centraliza cuotas, incidencias, reservas y comunicación.</p>
+          <div style="display:flex; gap:10px; margin-top:1.5rem;">
+            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/condor-manage.html';" data-i18n="products.condor.cta.main">Unirme a la beta</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/condor-manage.html#features';" data-i18n="products.condor.cta.secondary">Ver funcionalidades</button>
+          </div>
+        </div>
+
+        <!-- Eos Analytics (próximamente) -->
+        <div class="card analytics-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+            <h3><a href="/pages/eos-analytics.html" style="color:inherit; text-decoration:none;" data-i18n="products.analytics.title">Eos Analytics</a></h3>
+            <span class="product-badge analytics-badge" data-i18n="products.analytics.badge">DATA</span>
+          </div>
+          <p data-i18n="products.analytics.desc">Suite de análisis y visualización de datos en validación. Explora datasets, visualiza resultados y apoya decisiones con evidencia.</p>
+          <div style="display:flex; gap:10px; margin-top:1.5rem;">
+            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/eos-analytics.html';" data-i18n="products.analytics.cta.main">Conocer más</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/eos-analytics.html#capabilities';" data-i18n="products.analytics.cta.secondary">Ver capacidades</button>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -156,84 +233,66 @@
           <p data-i18n="services.dev.desc">Sistemas a medida, APIs robustas y soluciones escalables con Python, React y bases de datos optimizadas.</p>
         </div>
         <div class="service-card">
-          <h3>Arquitectura & Integración</h3>
-          <p>Diseño de soluciones tecnológicas, integraciones, APIs y estructuras preparadas para crecer con el proyecto.</p>
+          <h3 data-i18n="services.arch">Arquitectura & Integración</h3>
+          <p data-i18n="services.arch.desc">Diseño de soluciones tecnológicas, integraciones, APIs y estructuras preparadas para crecer.</p>
         </div>
         <div class="service-card">
           <h3 data-i18n="services.data">Análisis de Data</h3>
           <p data-i18n="services.data.desc">Procesamiento, visualización y análisis de datos para la toma de decisiones estratégicas.</p>
         </div>
         <div class="service-card">
-          <h3 data-i18n="services.survey">Encuestas y Formularios</h3>
-          <p data-i18n="services.survey.desc">Sistemas de recolección de datos con análisis automático y reportes en tiempo real.</p>
-        </div>
-        <div class="service-card">
           <h3 data-i18n="services.ia">Soluciones con IA</h3>
-          <p data-i18n="services.ia.desc">Automatización, chatbots y análisis predictivo usando herramientas de IA gratuitas y accesibles.</p>
+          <p data-i18n="services.ia.desc">Automatización, chatbots y análisis predictivo usando herramientas de IA accesibles.</p>
         </div>
         <div class="service-card">
           <h3 data-i18n="services.consulting">Consultoría Técnica</h3>
           <p data-i18n="services.consulting.desc">Asesoría en arquitectura de software, optimización de sistemas y estrategias digitales.</p>
         </div>
-      </div>
-      <div class="services-cta-wrapper">
-        <a href="#contact" class="cta-button" data-i18n="hero.cta">COTIZAR PROYECTO</a>
+        <div class="service-card">
+          <h3 data-i18n="services.survey">Encuestas y Formularios</h3>
+          <p data-i18n="services.survey.desc">Sistemas de recolección de datos con análisis automático y reportes en tiempo real.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Products -->
-  <section id="products" class="section-padding" style="background: #0d1117;">
+  <!-- Process -->
+  <section id="process" class="section-padding" style="background: var(--dark-bg);">
     <div class="container">
-      <h2 style="text-align: center; font-size: 2.5rem;" data-i18n="products.title">Sistemas de Alto Impacto</h2>
-      <div class="grid-auto">
-        <!-- AGNES -->
-        <div class="card agnes-card">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-            <h3><a href="/pages/agnes.html" style="color:inherit; text-decoration:none;">AGNES</a></h3>
-            <span style="color:var(--agnes-green); font-weight:800; border:1px solid; padding:2px 8px; border-radius:4px; font-size:0.7rem;" data-i18n="products.agnes.badge">AGRO</span>
-          </div>
-          <p data-i18n="products.agnes.desc">Inteligencia porcina total. Gestión de genética y salud con trazabilidad absoluta en tiempo real.</p>
-          <button class="btn btn-outline" style="width:100%; margin-top:1.5rem;" onclick="window.location.href='/pages/agnes.html';" data-i18n="products.agnes.cta">Ver más</button>
-        </div>
+      <h2 style="text-align: center; font-size: 2.5rem;" data-i18n="process.title">Cómo trabajamos</h2>
+      <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 1rem;" data-i18n="process.lead">Un proceso claro, de la primera conversación al soporte continuo.</p>
 
-        <!-- NexusCare -->
-        <div class="card nexus-card">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-            <h3><a href="/pages/nexuscare.html" style="color:inherit; text-decoration:none;">NexusCare Assets</a></h3>
-            <span style="color:var(--nexus-blue); font-weight:800; border:1px solid; padding:2px 8px; border-radius:4px; font-size:0.7rem;" data-i18n="products.nexus.badge">HEALTH</span>
-          </div>
-          <p data-i18n="products.nexus.desc">Control de activos médicos y blindaje fiscal. Evita mermas y asegura la trazabilidad legal.</p>
-          <div style="display:flex; gap:10px; margin-top:1.5rem;">
-            <button class="btn btn-cyan" style="flex:1;" onclick="window.location.href='/pages/nexuscare.html';" data-i18n="products.nexus.cta.main">Ver más</button>
-            <button class="btn btn-outline" style="flex:1;" onclick="window.location.href='/pages/nexuscare.html#licencias';" data-i18n="products.nexus.cta.licenses">Licencias</button>
-          </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="num">01</span>
+          <h3 data-i18n="process.step1.title">Demo</h3>
+          <p data-i18n="process.step1.desc">Te mostramos el producto en acción y resolvemos dudas técnicas y de negocio.</p>
         </div>
-
-        <!-- Condor Manage -->
-        <div class="card product-card-eos">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
-            <h3>Condor Manage</h3>
-            <span style="color:var(--cyan);font-weight:800;border:1px solid;padding:2px 8px;border-radius:4px;font-size:.7rem;">SAAS</span>
-          </div>
-          <p>Plataforma de gestión empresarial de EOS, orientada a centralizar procesos, operaciones y control.</p>
-          <button class="btn btn-outline" style="width:100%;margin-top:1.5rem;" onclick="window.location.href='/pages/condor-manage.html';">Conocer Condor Manage</button>
+        <div class="process-step">
+          <span class="num">02</span>
+          <h3 data-i18n="process.step2.title">Diagnóstico</h3>
+          <p data-i18n="process.step2.desc">Entendemos tu operación y definimos el alcance: piloto, beta o implementación.</p>
         </div>
-
-        <!-- Eos Analytics -->
-        <div class="card product-card-eos">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
-            <h3>Eos Analytics</h3>
-            <span style="color:var(--purple);font-weight:800;border:1px solid;padding:2px 8px;border-radius:4px;font-size:.7rem;">DATA</span>
-          </div>
-          <p>Herramienta de análisis de datos de EOS para explorar datasets, visualizar resultados y apoyar decisiones.</p>
-          <button class="btn btn-outline" style="width:100%;margin-top:1.5rem;" onclick="window.location.href='/pages/eos-analytics.html';">Conocer Eos Analytics</button>
+        <div class="process-step">
+          <span class="num">03</span>
+          <h3 data-i18n="process.step3.title">Implementación</h3>
+          <p data-i18n="process.step3.desc">Configuramos, integramos y desplegamos. Onboarding asistido para tu equipo.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">04</span>
+          <h3 data-i18n="process.step4.title">Capacitación</h3>
+          <p data-i18n="process.step4.desc">Formación práctica para que tu equipo aproveche el producto desde el día uno.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">05</span>
+          <h3 data-i18n="process.step5.title">Soporte</h3>
+          <p data-i18n="process.step5.desc">Acompañamiento continuo, actualizaciones y mejoras según feedback real.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- JH Duo -->
+  <!-- EOS Academy -->
   <section id="academy" class="academy">
     <div class="container">
       <h2 data-i18n="academy.title">EOS Academy</h2>
@@ -241,10 +300,10 @@
 
       <div class="course-card">
         <div class="course-video">
-          <iframe 
-            src="https://www.youtube.com/embed/VIDEO_ID_PLACEHOLDER" 
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_PLACEHOLDER"
             title="Taller IA Bajo Control"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
           <div class="video-overlay">
@@ -281,13 +340,118 @@
     </div>
   </section>
 
+  <!-- JH Duo -->
+  <section id="jhduo" class="jhduo-section">
+    <div class="container">
+      <div class="jhduo-card">
+        <p class="jhduo-kicker" data-i18n="jhduo.kicker">Marca hermana</p>
+        <h2 data-i18n="jhduo.title">¿Necesitas un sitio web?</h2>
+        <p data-i18n="jhduo.desc">El desarrollo web está en manos de JH Duo. Sitios bilingües, rápidos y orientados a conversión para pequeñas empresas en EE.UU. y Latinoamérica.</p>
+        <div class="jhduo-services">
+          <div class="jhduo-service" data-i18n="jhduo.service1">Diseño web a medida</div>
+          <div class="jhduo-service" data-i18n="jhduo.service2">Bilingüe EN/ES</div>
+          <div class="jhduo-service" data-i18n="jhduo.service3">SEO local</div>
+          <div class="jhduo-service" data-i18n="jhduo.service4">Booking y pagos</div>
+        </div>
+        <a href="https://www.jhduo.com" class="jhduo-button" target="_blank" rel="noopener noreferrer" data-i18n="jhduo.cta">Ir a jhduo.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section-padding" style="background: var(--dark-bg);">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2.5rem;" data-i18n="team.title">Quiénes somos</h2>
+      <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 1rem;" data-i18n="team.lead">Un equipo pequeño, directo y sin intermediarios. Cuando escribes, te responde quien construye.</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <h3>Jean Pagliarani</h3>
+          <p class="role" data-i18n="team.jean.role">Co-founder · Colombia</p>
+          <a href="mailto:jean@eosconnecting.com">jean@eosconnecting.com</a>
+        </div>
+        <div class="team-card">
+          <h3>Henry Esaá</h3>
+          <p class="role" data-i18n="team.henry.role">Co-founder · Venezuela</p>
+          <a href="mailto:henry@eosconnecting.com">henry@eosconnecting.com</a>
+        </div>
+        <div class="team-card">
+          <h3>Andrew Rodríguez</h3>
+          <p class="role" data-i18n="team.andrew.role">Growth</p>
+          <a href="mailto:andrew@eosconnecting.com">andrew@eosconnecting.com</a>
+        </div>
+        <div class="team-card">
+          <h3>María Alejandra Herrera</h3>
+          <p class="role" data-i18n="team.mariale.role">Client Success</p>
+          <a href="mailto:mariale@eosconnecting.com">mariale@eosconnecting.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-padding" style="background: var(--dark-card);">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2.5rem;" data-i18n="faq.title">Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq.q1">¿En qué idiomas está disponible EOS Connecting?</summary>
+          <div class="answer" data-i18n="faq.a1">El sitio y los productos están disponibles en español, inglés, alemán, portugués e italiano.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">¿NexusCare Assets ya está disponible?</summary>
+          <div class="answer" data-i18n="faq.a2">Sí. NexusCare Assets está listo para producción. Puedes descargar una prueba gratuita de 15 días para Windows.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">¿Cómo funcionan los pilotos de AGNES y Condor Manage?</summary>
+          <div class="answer" data-i18n="faq.a3">Ambos están en etapa de validación. Durante el piloto el acceso es gratuito a cambio de feedback estructurado.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">¿Qué es Eos Analytics y cuándo estará disponible?</summary>
+          <div class="answer" data-i18n="faq.a4">Eos Analytics es nuestra suite de análisis y visualización de datos. Actualmente está en validación con especialistas.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">¿Puedo integrar los productos con mis sistemas actuales?</summary>
+          <div class="answer" data-i18n="faq.a5">Sí. Los productos están diseñados con APIs y arquitectura modular. Las integraciones se evalúan caso por caso.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">¿Ofrecen soporte en mi idioma?</summary>
+          <div class="answer" data-i18n="faq.a6">Sí. El equipo da soporte en español e inglés de forma directa. Para otros idiomas coordinamos según el caso.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q7">¿Cómo se cotiza un desarrollo a medida?</summary>
+          <div class="answer" data-i18n="faq.a7">Cada proyecto se cotiza según alcance, complejidad e integraciones. Escríbenos con el contexto y te damos una propuesta clara.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q8">¿Los datos están seguros?</summary>
+          <div class="answer" data-i18n="faq.a8">Sí. Usamos cifrado en tránsito, respaldos regulares y control de accesos.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q9">¿Trabajan con clientes fuera de Latinoamérica?</summary>
+          <div class="answer" data-i18n="faq.a9">Sí. Trabajamos de forma remota con clientes en Latinoamérica, Estados Unidos y Europa.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q10">¿Qué pasa si el producto no encaja con mi operación?</summary>
+          <div class="answer" data-i18n="faq.a10">Durante el piloto o la prueba, si el producto no encaja, no hay compromiso. Preferimos decirte que no a venderte algo que no te sirve.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q11">¿Cómo empiezo?</summary>
+          <div class="answer" data-i18n="faq.a11">Escríbenos desde el formulario de contacto o directamente a contacto@eosconnecting.com.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q12">¿EOS Connecting hace sitios web?</summary>
+          <div class="answer" data-i18n="faq.a12">No. El desarrollo web está en manos de JH Duo, nuestra marca hermana. Si necesitas una web, te derivamos directamente.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Ecosystem -->
   <section id="ecosystem" class="ecosystem ecosystem-full">
     <div class="container">
       <h2 style="text-align:center; margin-bottom:2.5rem;">
-        <a href="/pages/odyssey.html" style="color:var(--cyan); text-decoration:none;">
-          Odyssey Ecosystem
-        </a>
+        <a href="/pages/odyssey.html" style="color:var(--cyan); text-decoration:none;" data-i18n="ecosystem.title">Odyssey Ecosystem</a>
       </h2>
 
       <div class="logos-grid">
@@ -330,12 +494,46 @@
   <section id="contact" class="contact">
     <div class="container">
       <h2 data-i18n="contact.title">Contáctanos</h2>
-      <p class="contact-desc" data-i18n="contact.desc">¿Tienes un proyecto en mente? Escríbenos y hagámoslo realidad.</p>
-      <div class="contact-buttons">
-        <a href="mailto:contacto@eosconnecting.com" class="contact-btn contact-btn-primary" data-i18n="contact.email">CONTACTO@EOSCONNECTING.COM</a>
-        <a href="https://wa.me/584121590957" class="contact-btn contact-btn-green" data-i18n="contact.whatsapp">WHATSAPP</a>
-        <a href="https://www.instagram.com/eosconnecting/" class="contact-btn contact-btn-cyan" data-i18n="contact.instagram">INSTAGRAM</a>
-      </div>
+      <p class="contact-desc" data-i18n="contact.desc">Cuéntanos qué necesitas. Te respondemos directo.</p>
+
+      <form class="contact-form" action="mailto:contacto@eosconnecting.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c-name" data-i18n="contact.form.name">Tu nombre</label>
+            <input id="c-name" name="name" type="text" required>
+          </div>
+          <div class="form-field">
+            <label for="c-email" data-i18n="contact.form.email">Email</label>
+            <input id="c-email" name="email" type="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="c-company" data-i18n="contact.form.company">Empresa</label>
+            <input id="c-company" name="company" type="text">
+          </div>
+          <div class="form-field">
+            <label for="c-interest" data-i18n="contact.form.interest">Me interesa</label>
+            <select id="c-interest" name="interest">
+              <option value="nexus" data-i18n="contact.form.interest.nexus">NexusCare Assets</option>
+              <option value="agnes" data-i18n="contact.form.interest.agnes">AGNES (piloto)</option>
+              <option value="condor" data-i18n="contact.form.interest.condor">Condor Manage (beta)</option>
+              <option value="analytics" data-i18n="contact.form.interest.analytics">Eos Analytics</option>
+              <option value="academy" data-i18n="contact.form.interest.academy">EOS Academy</option>
+              <option value="custom" data-i18n="contact.form.interest.custom">Desarrollo a medida</option>
+              <option value="other" data-i18n="contact.form.interest.other">Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field" style="margin-bottom:1rem;">
+          <label for="c-message" data-i18n="contact.form.message">Cuéntanos sobre tu operación o proyecto</label>
+          <textarea id="c-message" name="message" required></textarea>
+        </div>
+        <div style="text-align:center;">
+          <button type="submit" class="cta-button" data-i18n="contact.form.send">Enviar mensaje</button>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-top:1rem;" data-i18n="contact.form.privacy">Solo usamos tu información para responderte. Sin spam.</p>
+        </div>
+      </form>
     </div>
   </section>
 
