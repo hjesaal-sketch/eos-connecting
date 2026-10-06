@@ -28,6 +28,10 @@
     grid-template-columns: 1fr;
   }
 
+  .grid-auto {
+    grid-template-columns: 1fr;
+  }
+
   .logos-grid {
     gap: 2rem;
   }
