@@ -16,13 +16,13 @@
 
 .hero-logo-container {
   margin-bottom: 2rem;
-  perspective: 1000px;
 }
 
 .hero-logo {
   width: 160px;
   height: auto;
-  animation: heroLogo 6s ease-in-out infinite;
+  animation: rotateYIn 2s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+             floating 4s ease-in-out 2s infinite;
   filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
 }
 
