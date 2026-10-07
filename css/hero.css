@@ -22,12 +22,8 @@
 .hero-logo {
   width: 160px;
   height: auto;
-  display: block;
-  margin: 0 auto;
-  transform: translateZ(0);
-  will-change: transform;
   animation: rotateYIn 2s cubic-bezier(0.4, 0, 0.2, 1) forwards,
-             floating 4s ease-in-out 2s infinite;
+             floating 4s ease-in-out infinite 2s;
   filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
 }
 
