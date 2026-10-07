@@ -1,3 +1,26 @@
+@keyframes heroLogo {
+  0% {
+    transform: rotateY(0deg) translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  15% {
+    transform: rotateY(360deg) translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(360deg) translateY(-10px) scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: rotateY(360deg) translateY(10px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg) translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
 @keyframes rotateYIn {
   0% { transform: rotateY(0deg) scale(0.5); opacity: 0; }
   100% { transform: rotateY(360deg) scale(1); opacity: 1; }

@@ -22,7 +22,7 @@
 .hero-logo {
   width: 160px;
   height: auto;
-  animation: heroLogo 6s cubic-bezier(0.4, 0, 0.2, 1) forwards infinite;
+  animation: heroLogo 6s ease-in-out infinite;
   filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
 }
 
