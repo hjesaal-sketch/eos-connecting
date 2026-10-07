@@ -19,16 +19,10 @@
   perspective: 1000px;
 }
 
-.hero-logo-float {
-  display: inline-block;
-  animation: floating 4s ease-in-out 2s infinite;
-}
-
 .hero-logo {
   width: 160px;
   height: auto;
-  display: block;
-  animation: rotateYIn 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: heroLogo 6s cubic-bezier(0.4, 0, 0.2, 1) forwards infinite;
   filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
 }
 
