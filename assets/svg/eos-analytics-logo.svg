@@ -1,0 +1,17 @@
+<svg viewBox="0 0 1080 1236" xmlns="http://www.w3.org/2000/svg" aria-label="Eos Analytics logo">
+  <style>
+    .bar-1 { animation: analyticsColor 3s ease-out 0.3s forwards; }
+    .bar-2 { animation: analyticsColor 3s ease-out 1s forwards; }
+    .bar-3 { animation: analyticsColor 3s ease-out 1.7s forwards; }
+    @keyframes analyticsColor {
+      0%   { fill: #b8bbc4; }
+      100% { fill: #ff0040; }
+    }
+  </style>
+
+  <path fill="#b8bbc4" d="M540 20 C250 20 20 270 20 618 C20 966 250 1216 540 1216 C830 1216 1060 966 1060 618 C1060 270 830 20 540 20 Z M540 60 C800 60 1010 290 1010 618 C1010 946 800 1176 540 1176 C280 1176 70 946 70 618 C70 290 280 60 540 60 Z"/>
+
+  <polygon class="bar-1" points="260,905 815,905 795,950 280,950" fill="#b8bbc4"/>
+  <rect class="bar-2" x="310" y="595" width="455" height="52" fill="#b8bbc4"/>
+  <polygon class="bar-3" points="260,305 815,305 775,350 300,350" fill="#b8bbc4"/>
+</svg>
