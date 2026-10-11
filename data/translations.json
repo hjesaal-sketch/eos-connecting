@@ -347,6 +347,41 @@
 
     "footer.ecosystem": "Parte de",
 
+    "condor.title": "Condor Manager",
+    "condor.subtitle": "SaaS de gestión de condominios en beta cerrada. Centraliza cuotas, residentes, reportes y comunicación en una sola plataforma.",
+    "condor.badge": "Beta cerrada · Acceso por invitación",
+
+    "condor.beta.title": "Solicita acceso a la beta",
+    "condor.beta.desc": "Condor Manager está en beta cerrada. Si administras un condominio y quieres probarlo, escríbenos y coordinamos tu acceso.",
+    "condor.beta.cta": "Ir a la plataforma",
+    "condor.beta.note": "Requiere credenciales. Solicítalas escribiendo a contacto@eosconnecting.com",
+
+    "condor.features.title": "¿Qué hace Condor Manager?",
+    "condor.features.desc": "Todo lo que un administrador de condominio necesita para operar sin hojas de cálculo ni grupos de WhatsApp.",
+
+    "condor.card1.title": "Gestión",
+    "condor.card1.desc": "Administra apartamentos, residentes y cuotas desde un panel centralizado.",
+    "condor.card2.title": "Reportes",
+    "condor.card2.desc": "Visualiza finanzas, morosidad y cobros en tiempo real con reportes claros.",
+    "condor.card3.title": "Notificaciones",
+    "condor.card3.desc": "Comunicación efectiva con todos los residentes desde la plataforma.",
+    "condor.card4.title": "Multi-condominio",
+    "condor.card4.desc": "Gestiona varios condominios desde una sola cuenta, con roles y permisos.",
+    "condor.card5.title": "Seguridad",
+    "condor.card5.desc": "Autenticación por roles. Cada usuario ve solo lo que le corresponde.",
+    "condor.card6.title": "Acceso web",
+    "condor.card6.desc": "Sin instalación. Accede desde cualquier navegador, en escritorio o móvil.",
+
+    "condor.audience.title": "Para quién es",
+    "condor.audience.item1": "Administradores de condominios y edificios residenciales.",
+    "condor.audience.item2": "Juntas directivas que necesitan transparencia en las cuentas.",
+    "condor.audience.item3": "Empresas administradoras con varios condominios bajo gestión.",
+    "condor.audience.item4": "Propietarios que quieren visibilidad de sus cuotas y pagos.",
+
+    "condor.cta.title": "¿Listo para probar Condor Manager?",
+    "condor.cta.desc": "Cuéntanos sobre tu condominio y coordinamos el acceso a la beta.",
+    "condor.cta.button": "Solicitar acceso",
+
     "nexus.download.options": "Ver opciones de licencia",
     "nexus.pricing.yearly.badge": "RECOMENDADO",
     "nexus.section1.title": "¿Qué hace NexusCare?",
@@ -713,6 +748,41 @@
     "contact.form.privacy": "We only use your information to reply to you. No spam.",
 
     "footer.ecosystem": "Part of",
+
+    "condor.title": "Condor Manager",
+    "condor.subtitle": "Condominium management SaaS in closed beta. Centralizes fees, residents, reports and communication in a single platform.",
+    "condor.badge": "Closed beta · Invitation only",
+
+    "condor.beta.title": "Request beta access",
+    "condor.beta.desc": "Condor Manager is in closed beta. If you manage a condominium and want to try it, write to us and we will coordinate your access.",
+    "condor.beta.cta": "Go to the platform",
+    "condor.beta.note": "Requires credentials. Request them by writing to contacto@eosconnecting.com",
+
+    "condor.features.title": "What does Condor Manager do?",
+    "condor.features.desc": "Everything a condominium administrator needs to operate without spreadsheets or WhatsApp groups.",
+
+    "condor.card1.title": "Management",
+    "condor.card1.desc": "Manage apartments, residents and fees from a centralized panel.",
+    "condor.card2.title": "Reports",
+    "condor.card2.desc": "Visualize finances, delinquency and collections in real time with clear reports.",
+    "condor.card3.title": "Notifications",
+    "condor.card3.desc": "Effective communication with all residents from the platform.",
+    "condor.card4.title": "Multi-condominium",
+    "condor.card4.desc": "Manage multiple condominiums from a single account, with roles and permissions.",
+    "condor.card5.title": "Security",
+    "condor.card5.desc": "Role-based authentication. Each user sees only what corresponds to them.",
+    "condor.card6.title": "Web access",
+    "condor.card6.desc": "No installation. Access from any browser, on desktop or mobile.",
+
+    "condor.audience.title": "Who it's for",
+    "condor.audience.item1": "Administrators of condominiums and residential buildings.",
+    "condor.audience.item2": "Board members who need transparency in the accounts.",
+    "condor.audience.item3": "Management companies with several condominiums under management.",
+    "condor.audience.item4": "Owners who want visibility of their fees and payments.",
+
+    "condor.cta.title": "Ready to try Condor Manager?",
+    "condor.cta.desc": "Tell us about your condominium and we will coordinate beta access.",
+    "condor.cta.button": "Request access",
 
     "nexus.subtitle": "Medical asset control and fiscal shielding. Avoid losses and ensure legal traceability.",
     "nexus.download.requirements": "Requirements: Windows 10/11, 4GB RAM, 500MB space",
@@ -1117,6 +1187,41 @@
 
     "footer.ecosystem": "Teil von",
 
+    "condor.title": "Condor Manager",
+    "condor.subtitle": "SaaS für Wohnungsverwaltung in geschlossener Beta. Zentralisiert Gebühren, Bewohner, Berichte und Kommunikation auf einer einzigen Plattform.",
+    "condor.badge": "Geschlossene Beta · Nur auf Einladung",
+
+    "condor.beta.title": "Beta-Zugang anfordern",
+    "condor.beta.desc": "Condor Manager befindet sich in geschlossener Beta. Wenn Sie eine Wohnanlage verwalten und es ausprobieren möchten, schreiben Sie uns und wir koordinieren Ihren Zugang.",
+    "condor.beta.cta": "Zur Plattform",
+    "condor.beta.note": "Erfordert Zugangsdaten. Fordern Sie diese per E-Mail an contacto@eosconnecting.com an",
+
+    "condor.features.title": "Was macht Condor Manager?",
+    "condor.features.desc": "Alles, was ein Wohnungsverwalter braucht, um ohne Tabellenkalkulationen oder WhatsApp-Gruppen zu arbeiten.",
+
+    "condor.card1.title": "Verwaltung",
+    "condor.card1.desc": "Verwalten Sie Wohnungen, Bewohner und Gebühren über ein zentrales Panel.",
+    "condor.card2.title": "Berichte",
+    "condor.card2.desc": "Visualisieren Sie Finanzen, Zahlungsrückstände und Einnahmen in Echtzeit mit klaren Berichten.",
+    "condor.card3.title": "Benachrichtigungen",
+    "condor.card3.desc": "Effektive Kommunikation mit allen Bewohnern über die Plattform.",
+    "condor.card4.title": "Multi-Wohnanlage",
+    "condor.card4.desc": "Verwalten Sie mehrere Wohnanlagen über ein einziges Konto, mit Rollen und Berechtigungen.",
+    "condor.card5.title": "Sicherheit",
+    "condor.card5.desc": "Rollenbasierte Authentifizierung. Jeder Benutzer sieht nur, was ihm entspricht.",
+    "condor.card6.title": "Web-Zugang",
+    "condor.card6.desc": "Keine Installation. Zugriff über jeden Browser, auf Desktop oder Mobilgerät.",
+
+    "condor.audience.title": "Für wen es ist",
+    "condor.audience.item1": "Verwalter von Wohnanlagen und Wohngebäuden.",
+    "condor.audience.item2": "Vorstände, die Transparenz in den Konten benötigen.",
+    "condor.audience.item3": "Verwaltungsgesellschaften mit mehreren Wohnanlagen in Verwaltung.",
+    "condor.audience.item4": "Eigentümer, die Sichtbarkeit über ihre Gebühren und Zahlungen wünschen.",
+
+    "condor.cta.title": "Bereit, Condor Manager auszuprobieren?",
+    "condor.cta.desc": "Erzählen Sie uns von Ihrer Wohnanlage und wir koordinieren den Beta-Zugang.",
+    "condor.cta.button": "Zugang anfordern",
+
     "nexus.subtitle": "Kontrolle medizinischer Vermögenswerte und steuerliche Absicherung. Vermeiden Sie Verluste und gewährleisten Sie die rechtliche Rückverfolgbarkeit.",
     "nexus.download.requirements": "Anforderungen: Windows 10/11, 4GB RAM, 500MB Speicherplatz",
     "nexus.download.button": "⬇️ Für Windows herunterladen",
@@ -1520,6 +1625,41 @@
 
     "footer.ecosystem": "Parte da",
 
+    "condor.title": "Condor Manager",
+    "condor.subtitle": "SaaS de gestão de condomínios em beta fechada. Centraliza taxas, moradores, relatórios e comunicação em uma única plataforma.",
+    "condor.badge": "Beta fechada · Acesso por convite",
+
+    "condor.beta.title": "Solicite acesso à beta",
+    "condor.beta.desc": "O Condor Manager está em beta fechada. Se você administra um condomínio e quer testá-lo, escreva-nos e coordenamos seu acesso.",
+    "condor.beta.cta": "Ir para a plataforma",
+    "condor.beta.note": "Requer credenciais. Solicite-as escrevendo para contacto@eosconnecting.com",
+
+    "condor.features.title": "O que o Condor Manager faz?",
+    "condor.features.desc": "Tudo o que um administrador de condomínio precisa para operar sem planilhas ou grupos de WhatsApp.",
+
+    "condor.card1.title": "Gestão",
+    "condor.card1.desc": "Administre apartamentos, moradores e taxas em um painel centralizado.",
+    "condor.card2.title": "Relatórios",
+    "condor.card2.desc": "Visualize finanças, inadimplência e cobranças em tempo real com relatórios claros.",
+    "condor.card3.title": "Notificações",
+    "condor.card3.desc": "Comunicação eficaz com todos os moradores pela plataforma.",
+    "condor.card4.title": "Multi-condomínio",
+    "condor.card4.desc": "Gerencie vários condomínios em uma única conta, com papéis e permissões.",
+    "condor.card5.title": "Segurança",
+    "condor.card5.desc": "Autenticação por papéis. Cada usuário vê apenas o que lhe corresponde.",
+    "condor.card6.title": "Acesso web",
+    "condor.card6.desc": "Sem instalação. Acesse de qualquer navegador, em desktop ou celular.",
+
+    "condor.audience.title": "Para quem é",
+    "condor.audience.item1": "Administradores de condomínios e edifícios residenciais.",
+    "condor.audience.item2": "Diretorias que precisam de transparência nas contas.",
+    "condor.audience.item3": "Empresas administradoras com vários condomínios sob gestão.",
+    "condor.audience.item4": "Proprietários que querem visibilidade de suas taxas e pagamentos.",
+
+    "condor.cta.title": "Pronto para testar o Condor Manager?",
+    "condor.cta.desc": "Conte-nos sobre seu condomínio e coordenamos o acesso à beta.",
+    "condor.cta.button": "Solicitar acesso",
+
     "nexus.subtitle": "Controle de ativos médicos e blindagem fiscal. Evite perdas e garanta a rastreabilidade legal.",
     "nexus.download.requirements": "Requisitos: Windows 10/11, 4GB RAM, 500MB de espaço",
     "nexus.download.button": "⬇️ Baixar para Windows",
@@ -1922,6 +2062,41 @@
     "contact.form.privacy": "Usiamo le tue informazioni solo per risponderti. Niente spam.",
 
     "footer.ecosystem": "Parte di",
+
+    "condor.title": "Condor Manager",
+    "condor.subtitle": "SaaS per la gestione dei condomini in beta chiusa. Centralizza quote, residenti, report e comunicazione in un'unica piattaforma.",
+    "condor.badge": "Beta chiusa · Accesso su invito",
+
+    "condor.beta.title": "Richiedi accesso alla beta",
+    "condor.beta.desc": "Condor Manager è in beta chiusa. Se gestisci un condominio e vuoi provarlo, scrivici e coordiniamo il tuo accesso.",
+    "condor.beta.cta": "Vai alla piattaforma",
+    "condor.beta.note": "Richiede credenziali. Richiedile scrivendo a contacto@eosconnecting.com",
+
+    "condor.features.title": "Cosa fa Condor Manager?",
+    "condor.features.desc": "Tutto ciò che serve a un amministratore di condominio per operare senza fogli di calcolo o gruppi WhatsApp.",
+
+    "condor.card1.title": "Gestione",
+    "condor.card1.desc": "Gestisci appartamenti, residenti e quote da un pannello centralizzato.",
+    "condor.card2.title": "Report",
+    "condor.card2.desc": "Visualizza finanze, morosità e incassi in tempo reale con report chiari.",
+    "condor.card3.title": "Notifiche",
+    "condor.card3.desc": "Comunicazione efficace con tutti i residenti dalla piattaforma.",
+    "condor.card4.title": "Multi-condominio",
+    "condor.card4.desc": "Gestisci più condomini da un unico account, con ruoli e permessi.",
+    "condor.card5.title": "Sicurezza",
+    "condor.card5.desc": "Autenticazione basata su ruoli. Ogni utente vede solo ciò che gli corrisponde.",
+    "condor.card6.title": "Accesso web",
+    "condor.card6.desc": "Nessuna installazione. Accedi da qualsiasi browser, su desktop o mobile.",
+
+    "condor.audience.title": "Per chi è",
+    "condor.audience.item1": "Amministratori di condomini ed edifici residenziali.",
+    "condor.audience.item2": "Consigli di amministrazione che necessitano trasparenza nei conti.",
+    "condor.audience.item3": "Società di gestione con più condomini sotto amministrazione.",
+    "condor.audience.item4": "Proprietari che vogliono visibilità sulle loro quote e pagamenti.",
+
+    "condor.cta.title": "Pronto a provare Condor Manager?",
+    "condor.cta.desc": "Raccontaci del tuo condominio e coordiniamo l'accesso alla beta.",
+    "condor.cta.button": "Richiedi accesso",
 
     "nexus.subtitle": "Controllo delle risorse mediche e protezione fiscale. Evita perdite e garantisci la tracciabilità legale.",
     "nexus.download.requirements": "Requisiti: Windows 10/11, 4GB RAM, 500MB di spazio",
